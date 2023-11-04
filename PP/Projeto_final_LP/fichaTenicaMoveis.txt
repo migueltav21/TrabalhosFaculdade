@@ -1,0 +1,62 @@
+Ficha tecnica do movel: Comoda 3 Gavetas
+
+Codigo de produto: P00002
+Preco: 299.00
+Dimensoes: 160.00 x 120.00 x 60.00
+Estado [1 - Ativo; 0 - Inativo]: 1
+--------------Materiais--------------
+Nome do material: Tubo Cola 10GR
+Codigo de Produto: M0001
+Quantidade: 4
+Unidade: UN
+
+Nome do material: Parafuso 30MM
+Codigo de Produto: M0002
+Quantidade: 8
+Unidade: UN
+
+Nome do material: Bucha 30MM
+Codigo de Produto: M0003
+Quantidade: 8
+Unidade: UN
+
+Nome do material: Laterais 60x120
+Codigo de Produto: M0008
+Quantidade: 2
+Unidade: UN
+
+Nome do material: Fundo 160x120
+Codigo de Produto: M0010
+Quantidade: 1
+Unidade: UN
+
+Nome do material: Base 160x60
+Codigo de Produto: M0011
+Quantidade: 2
+Unidade: UN
+
+Nome do material: Ferragem 40CM
+Codigo de Produto: M0012
+Quantidade: 3
+Unidade: PAR
+
+Nome do material: Fundo 155x35
+Codigo de Produto: M0013
+Quantidade: 3
+Unidade: UN
+
+Nome do material: Laterais 55x35
+Codigo de Produto: M0014
+Quantidade: 6
+Unidade: UN
+
+Nome do material: Frente 160x38
+Codigo de Produto: M0015
+Quantidade: 3
+Unidade: UN
+
+Nome do material: Base 155x55
+Codigo de Produto: M0016
+Quantidade: 3
+Unidade: UN
+

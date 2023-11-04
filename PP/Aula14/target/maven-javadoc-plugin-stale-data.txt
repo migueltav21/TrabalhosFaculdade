@@ -1,0 +1,46 @@
+@options
+@packages
+-encoding
+'UTF-8'
+-protected
+-source
+'13'
+-sourcepath
+'C:/Users/joao/Desktop/PP/Aula14/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2023. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/joao/Desktop/PP/Aula14/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'Aula14 1.0-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/13/docs/api' 'C:/Users/joao/Desktop/PP/Aula14/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'Aula14 1.0-SNAPSHOT API'
+aula14
+C:\Users\joao\Desktop\PP\Aula14\src\main\java = 1683740388310
+C:\Users\joao\Desktop\PP\Aula14\target\site\apidocs\allclasses-index.html = 1684235287631
+C:\Users\joao\Desktop\PP\Aula14\target\site\apidocs\allpackages-index.html = 1684235287640
+C:\Users\joao\Desktop\PP\Aula14\target\site\apidocs\constant-values.html = 1684235287413
+C:\Users\joao\Desktop\PP\Aula14\target\site\apidocs\deprecated-list.html = 1684235287558
+C:\Users\joao\Desktop\PP\Aula14\target\site\apidocs\element-list = 1684235287387
+C:\Users\joao\Desktop\PP\Aula14\target\site\apidocs\help-doc.html = 1684235287653
+C:\Users\joao\Desktop\PP\Aula14\target\site\apidocs\index-all.html = 1684235287627
+C:\Users\joao\Desktop\PP\Aula14\target\site\apidocs\index.html = 1684235287646
+C:\Users\joao\Desktop\PP\Aula14\target\site\apidocs\member-search-index.js = 1684235287619
+C:\Users\joao\Desktop\PP\Aula14\target\site\apidocs\member-search-index.zip = 1684235287619
+C:\Users\joao\Desktop\PP\Aula14\target\site\apidocs\overview-tree.html = 1684235287540
+C:\Users\joao\Desktop\PP\Aula14\target\site\apidocs\package-search-index.js = 1684235287581
+C:\Users\joao\Desktop\PP\Aula14\target\site\apidocs\package-search-index.zip = 1684235287611
+C:\Users\joao\Desktop\PP\Aula14\target\site\apidocs\script.js = 1684235287664
+C:\Users\joao\Desktop\PP\Aula14\target\site\apidocs\search.js = 1684235287671
+C:\Users\joao\Desktop\PP\Aula14\target\site\apidocs\stylesheet.css = 1684235287660
+C:\Users\joao\Desktop\PP\Aula14\target\site\apidocs\type-search-index.js = 1684235287613
+C:\Users\joao\Desktop\PP\Aula14\target\site\apidocs\type-search-index.zip = 1684235287617

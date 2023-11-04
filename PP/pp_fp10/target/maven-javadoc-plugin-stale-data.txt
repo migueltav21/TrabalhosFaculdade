@@ -1,0 +1,87 @@
+@options
+@argfile
+-encoding
+'UTF-8'
+-protected
+-source
+'13'
+-sourcepath
+'C:/Users/joao/Desktop/PP/pp_fp10/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2023. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/joao/Desktop/PP/pp_fp10/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'pp_fp10 1.0-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/13/docs/api' 'C:/Users/joao/Desktop/PP/pp_fp10/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'pp_fp10 1.0-SNAPSHOT API'
+'C:/Users/joao/Desktop/PP/pp_fp10/src/main/java/CoffeeService.java'
+'C:/Users/joao/Desktop/PP/pp_fp10/src/main/java/Company.java'
+'C:/Users/joao/Desktop/PP/pp_fp10/src/main/java/ContinentHipermarket.java'
+'C:/Users/joao/Desktop/PP/pp_fp10/src/main/java/CreditService.java'
+'C:/Users/joao/Desktop/PP/pp_fp10/src/main/java/GasService.java'
+'C:/Users/joao/Desktop/PP/pp_fp10/src/main/java/GasStation.java'
+'C:/Users/joao/Desktop/PP/pp_fp10/src/main/java/Hipermarket.java'
+'C:/Users/joao/Desktop/PP/pp_fp10/src/main/java/HipermarketService.java'
+'C:/Users/joao/Desktop/PP/pp_fp10/src/main/java/JumbHipermarket.java'
+'C:/Users/joao/Desktop/PP/pp_fp10/src/main/java/LargeGasStation.java'
+'C:/Users/joao/Desktop/PP/pp_fp10/src/main/java/Marketservice.java'
+'C:/Users/joao/Desktop/PP/pp_fp10/src/main/java/NewMain.java'
+'C:/Users/joao/Desktop/PP/pp_fp10/src/main/java/Supermarket.java'
+C:\Users\joao\Desktop\PP\pp_fp10\src\main\java\CoffeeService.java = 1682621472792
+C:\Users\joao\Desktop\PP\pp_fp10\src\main\java\Company.java = 1682619753210
+C:\Users\joao\Desktop\PP\pp_fp10\src\main\java\ContinentHipermarket.java = 1683026816198
+C:\Users\joao\Desktop\PP\pp_fp10\src\main\java\CreditService.java = 1682946131378
+C:\Users\joao\Desktop\PP\pp_fp10\src\main\java\GasService.java = 1682619753179
+C:\Users\joao\Desktop\PP\pp_fp10\src\main\java\GasStation.java = 1683026816249
+C:\Users\joao\Desktop\PP\pp_fp10\src\main\java\Hipermarket.java = 1683026816136
+C:\Users\joao\Desktop\PP\pp_fp10\src\main\java\HipermarketService.java = 1682946131485
+C:\Users\joao\Desktop\PP\pp_fp10\src\main\java\JumbHipermarket.java = 1683026816077
+C:\Users\joao\Desktop\PP\pp_fp10\src\main\java\LargeGasStation.java = 1682621654625
+C:\Users\joao\Desktop\PP\pp_fp10\src\main\java\Marketservice.java = 1682622503115
+C:\Users\joao\Desktop\PP\pp_fp10\src\main\java\NewMain.java = 1682622237230
+C:\Users\joao\Desktop\PP\pp_fp10\src\main\java\Supermarket.java = 1682622520724
+C:\Users\joao\Desktop\PP\pp_fp10\src\main\java = 1683022862732
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\allclasses-index.html = 1683133242552
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\allpackages-index.html = 1683133242562
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\CoffeeService.html = 1683133241851
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\Company.html = 1683133241919
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\constant-values.html = 1683133242253
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\ContinentHipermarket.html = 1683133241969
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\CreditService.html = 1683133241984
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\deprecated-list.html = 1683133242452
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\element-list = 1683133242227
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\GasService.html = 1683133242015
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\GasStation.html = 1683133242045
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\help-doc.html = 1683133242574
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\Hipermarket.html = 1683133242088
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\HipermarketService.html = 1683133242102
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\index-all.html = 1683133242543
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\index.html = 1683133242565
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\JumbHipermarket.html = 1683133242144
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\LargeGasStation.html = 1683133242174
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\Marketservice.html = 1683133242187
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\member-search-index.js = 1683133242531
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\member-search-index.zip = 1683133242531
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\NewMain.html = 1683133242203
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\overview-tree.html = 1683133242409
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\package-search-index.js = 1683133242490
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\package-search-index.zip = 1683133242513
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\package-summary.html = 1683133242234
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\package-tree.html = 1683133242244
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\package-use.html = 1683133242396
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\script.js = 1683133242580
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\search.js = 1683133242593
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\stylesheet.css = 1683133242580
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\Supermarket.html = 1683133242220
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\type-search-index.js = 1683133242519
+C:\Users\joao\Desktop\PP\pp_fp10\target\site\apidocs\type-search-index.zip = 1683133242524

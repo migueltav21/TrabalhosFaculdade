@@ -1,0 +1,48 @@
+@options
+@packages
+-encoding
+'UTF-8'
+-protected
+-source
+'13'
+-sourcepath
+'C:/Users/joao/Desktop/PP/pp_fp07/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2023. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/joao/Desktop/PP/pp_fp07/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'pp_fp07 1.0-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/13/docs/api' 'C:/Users/joao/Desktop/PP/pp_fp07/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'pp_fp07 1.0-SNAPSHOT API'
+pp_fp07.bikeStore
+pp_fp07.publicSchool
+C:\Users\joao\Desktop\PP\pp_fp07\src\main\java = 1680884124667
+C:\Users\joao\Desktop\PP\pp_fp07\target\site\apidocs\allclasses-index.html = 1681461028309
+C:\Users\joao\Desktop\PP\pp_fp07\target\site\apidocs\allpackages-index.html = 1681461028314
+C:\Users\joao\Desktop\PP\pp_fp07\target\site\apidocs\constant-values.html = 1681461027826
+C:\Users\joao\Desktop\PP\pp_fp07\target\site\apidocs\deprecated-list.html = 1681461028171
+C:\Users\joao\Desktop\PP\pp_fp07\target\site\apidocs\element-list = 1681461027779
+C:\Users\joao\Desktop\PP\pp_fp07\target\site\apidocs\help-doc.html = 1681461028326
+C:\Users\joao\Desktop\PP\pp_fp07\target\site\apidocs\index-all.html = 1681461028298
+C:\Users\joao\Desktop\PP\pp_fp07\target\site\apidocs\index.html = 1681461028184
+C:\Users\joao\Desktop\PP\pp_fp07\target\site\apidocs\member-search-index.js = 1681461028293
+C:\Users\joao\Desktop\PP\pp_fp07\target\site\apidocs\member-search-index.zip = 1681461028297
+C:\Users\joao\Desktop\PP\pp_fp07\target\site\apidocs\overview-summary.html = 1681461028314
+C:\Users\joao\Desktop\PP\pp_fp07\target\site\apidocs\overview-tree.html = 1681461028156
+C:\Users\joao\Desktop\PP\pp_fp07\target\site\apidocs\package-search-index.js = 1681461028267
+C:\Users\joao\Desktop\PP\pp_fp07\target\site\apidocs\package-search-index.zip = 1681461028282
+C:\Users\joao\Desktop\PP\pp_fp07\target\site\apidocs\script.js = 1681461028330
+C:\Users\joao\Desktop\PP\pp_fp07\target\site\apidocs\search.js = 1681461028343
+C:\Users\joao\Desktop\PP\pp_fp07\target\site\apidocs\stylesheet.css = 1681461028330
+C:\Users\joao\Desktop\PP\pp_fp07\target\site\apidocs\type-search-index.js = 1681461028285
+C:\Users\joao\Desktop\PP\pp_fp07\target\site\apidocs\type-search-index.zip = 1681461028290
