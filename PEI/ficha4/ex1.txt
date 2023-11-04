@@ -1,0 +1,22 @@
+1. Considere o documento XML com o nome: cd_catalog, disponível na plataforma moodle. Escreva
+expressões XPath que permitam obter:
+a) Todos os cds em que o elemento Country é igual a ‘USA’;
+RESOSTA:/CATALOG/child::CD[COUNTRY='USA']
+
+b) Todos os cds com um preço inferior a 10 euros;
+RESPOSTA://CD[PRICE<10]
+
+c) Todos os cds lançados entre 1980 e 1990;
+RESPOSTA://CD/TITLE
+
+e) Os CDs dos artistas em que o nome começa por ‘B’;
+RESPOSTA://CD[ARTIST[starts-with(.,'B')]]
+//CD[starts-with(ARTIST, 'B')]
+
+f) O número de CDs armazenados no documento; (dica: utilize a função count())
+RESPOSTA:count(//CD)
+count(/CATALOG/CD)
+
+g) O título (Title) e preço (Price) para os CDs dos anos 90.
+RESPOSTA://CD[starts-with(YEAR, '199')]/(TITLE|PRICE)
+//CD[YEAR<2000 and YEAR> 1989]/(TITLE|PRICE)

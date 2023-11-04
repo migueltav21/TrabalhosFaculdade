@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<restaurante xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="alinea1.xsd" tipo="italiano">
+    <nome>Mamma Mia</nome>
+    <capacidade>50</capacidade>
+    <localidade>Felgueiras</localidade>
+    <telefone>939154963</telefone>
+    <email>mammamia@gmail.com</email>
+</restaurante>

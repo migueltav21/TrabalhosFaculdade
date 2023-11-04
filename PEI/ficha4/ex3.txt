@@ -1,0 +1,32 @@
+3. Considere o documento XML com o nome: cd_catalog, disponível na plataforma moodle. Escreva
+transformações XQuery que permitam obter:
+3.1. Todos os cds lançados entre 1980 e 1990, ordenados pelo ano de lançamento.
+RESPOSTA:
+for $cd in doc("cd_catalog.xml")//CD
+let $ano := $cd/YEAR
+where $ano >= 1980 and $ano <= 1990
+order by $ano
+return $cd
+
+3.2. O título (Title) e preço (Price) para os CDs dos anos 90.
+RESPOSTA:
+for $cd in doc("cd_catalog.xml")//CD
+let $ano := $cd/YEAR
+where $ano >= 1990 and $ano <= 1999
+return <CD> {$cd/TITLE} {$cd/PRICE}</CD>
+
+3.3. Contar o número de CDs armazenados no documento.
+RESPOSTA:
+<Total>{
+count(doc("cd_catalog.xml")//CD)
+}</Total>
+
+3.4. A lista de todos os CDs (title, year, price) assim como a “idade” de cada CD (tendo em conta o ano
+atual). O resultado deverá ser apresentado utilizando um elemento: <AGE>.
+RESPOSTA:
+for $cd in doc("cd_catalog.xml")//CD
+let $idade := 2023 - $cd/YEAR
+return <CD> 
+{$cd/TITLE} {$cd/PRICE} {$cd/YEAR} 
+<AGE>{$idade}</AGE>
+</CD>

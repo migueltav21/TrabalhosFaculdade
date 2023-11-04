@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<restaurantes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="alinea2.xsd">
+    <restaurante>
+        <nome>Novo rumo</nome>
+        <capacidade>100</capacidade>
+        <localidade>Maia</localidade>
+        <telefone>919222892</telefone>
+        <email>novorumo@gmail.com</email>
+    </restaurante>
+    <restaurante>
+        <nome>Mr.Churrasco</nome>
+        <capacidade>200</capacidade>
+        <localidade>maia</localidade>
+        <telefone>987654321</telefone>
+    </restaurante>
+</restaurantes>

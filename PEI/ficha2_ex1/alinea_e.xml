@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<livro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="alinea_e.xsd" isbn = "978059600462">
+    O livro <titulo>Learning XML</titulo> foi escrito por
+    <autor>Erik T Ray</autor> e publicado em
+    <ano>2001</ano>.
+</livro>

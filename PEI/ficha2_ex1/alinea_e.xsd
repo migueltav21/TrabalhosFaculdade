@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="livro" type = "livroType"></xs:element>
+        <xs:complexType name="livroType" mixed="true">
+            <xs:sequence>
+                <xs:element name = "titulo" type = "xs:string"></xs:element>
+                <xs:element name = "autor" type = "xs:string"></xs:element>
+                <xs:element name = "ano" type = "xs:integer"></xs:element>
+            </xs:sequence>
+            <xs:attribute name = "isbn" type = "xs:integer"></xs:attribute>
+        </xs:complexType>
+</xs:schema>

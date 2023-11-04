@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://consultaMedica.pt/consulta"
+    targetNamespace="http://consultaMedica.pt/consulta" xmlns:p="http://consultaMedica.pt/paciente"
+    xmlns:m="http://consultaMedica.pt/medico" xmlns:r="http://consultaMedica.pt/medicamento"
+    elementFormDefault="qualified">
+
+    <xs:import schemaLocation="pacienteTipo.xsd" namespace="http://consultaMedica.pt/paciente"/>
+    <xs:import schemaLocation="medicoTipo.xsd" namespace="http://consultaMedica.pt/medico"/>
+    <xs:import schemaLocation="medicamentoTipo.xsd" namespace="http://consultaMedica.pt/medicamento"/>
+        
+
+    <xs:element name="prescricao">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="data" type="xs:date"/>
+
+                <xs:element name="medico">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nome" type="m:nomeTipo"/>
+                            <xs:element name="especialidade" type="m:especialidadeTipo"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="paciente" >
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nome" type="p:nomeTipo"/>
+                            <xs:element name="genero" type="p:generoTipo"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="medicamentos">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="medicamento" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name ="nome" type="r:nomeTipo"/>
+                                        <xs:element name="dosagem" type="r:dosagemTipo"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                                <!-- nota: numa prescrição podem ser acrescentados vários medicamentos-->
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

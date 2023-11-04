@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prescricao xmlns="http://consultaMedica.pt/consulta"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://consultaMedica.pt/consulta main.xsd"
+    xmlns:p="http://consultaMedica.pt/paciente"
+    xmlns:m="http://consultaMedica.pt/medico"
+    xmlns:r="http://consultaMedica.pt/medicamento">
+    <data>2001-09-10</data>
+    <medico>
+        <nome cedula="123456">Miguel</nome>
+        <especialidade>cardiologia</especialidade>
+    </medico>
+    <paciente>
+        <nome numero_utente="121212121">Rui</nome>
+        <genero>masculino</genero>
+    </paciente>
+    <medicamentos>
+        <medicamento>
+            <nome>Brufen</nome>
+            <dosagem unidade="mg">100</dosagem>
+        </medicamento>
+    </medicamentos>
+</prescricao>

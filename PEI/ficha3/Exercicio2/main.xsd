@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://faturaCompra.pt/fatura"
+    xmlns="http://faturaCompra.pt/fatura"
+    xmlns:c="http://faturaCompra.pt/cliente"
+    xmlns:p="http://faturaCompra.pt/produto"
+    elementFormDefault="qualified">
+    
+<xs:import schemaLocation="cliente.xsd" namespace="http://faturaCompra.pt/cliente"/>
+<xs:import schemaLocation="produto.xsd" namespace="http://faturaCompra.pt/produto"/>
+
+<xs:element name="fatura">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="numero">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:pattern value="[0-9][0-9][0-9][0-9][0-9][0-9][0-9]"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="data" type="xs:date"/>
+            <xs:element name="tipo_pagamento">
+                <xs:simpleType>
+                    <xs:restriction base ="xs:string">
+                        <xs:enumeration value="Multibanco"/>
+                        <xs:enumeration value="Transferencia"/>
+                        <xs:enumeration value="MBWAY"/>
+                        <xs:enumeration value="Dinheiro"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element ref="c:cliente"/>
+            <xs:element name="produtos">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="p:produto" maxOccurs="unbounded" minOccurs="1"></xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+</xs:schema>

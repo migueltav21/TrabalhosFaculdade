@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emails>
+    <email category="email normal">
+        <to>miguel</to>
+        <from>joao</from>
+        <body>ola tudo?</body>
+        <heading>sasas</heading>
+    </email>
+</emails>

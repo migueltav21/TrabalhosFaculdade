@@ -1,0 +1,30 @@
+2. Considere o documento XML com o nome: bookstore (disponível na plataforma moodle). Escreva
+expressões XPath que permitam obter:
+a) A lista dos títulos (title) dos livros (book) escritos (lang) em “en-us”;
+RESPOSTA:/bookstore/book/title[@lang = 'en-us']
+
+b) Quantos livros (book) estão escritos (lang) em "en-us"? (dica: utilize a função count())
+RESPOSTA:count(//book/title[@lang = 'en-us'])
+
+c) A lista dos autores (author) com o apelido "Laurentiis";
+RESPOSTA://author[contains(., 'Laurentiis')]
+
+d) A lista dos títulos (title) dos livros (book) com um preço (price) superior a 30;
+RESPOSTA://book[price>30]/title
+
+e) O último nodo da bookstore; (dica: utilize a função last())
+RESPOSTA://book[last()]
+(//bookstore/*)[last()]
+
+f) O primeiro nodo da bookstore; (dica: utilize a função position())
+RESPOSTA://book[position()= 1]
+
+g) Devolver o número de elementos que o documento contém; (dica: utilize a função count())
+RESPOSTA:count(/bookstore/*)
+
+h) Do primeiro livro, devolver o seu segundo elemento;
+RESPOSTA:(//book[1]/*)[2]
+
+i) Devolver os livros que contenham “ay” ou “ry” no seu título (title); (dica: utilize a função
+contains())
+RESPOSTA://book[contains(title, 'ay') or contains(title, 'ry')]

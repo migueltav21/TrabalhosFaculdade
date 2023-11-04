@@ -1,0 +1,54 @@
+@options
+@argfile
+-encoding
+'UTF-8'
+-protected
+-source
+'13'
+-sourcepath
+'C:/Users/joao/Desktop/GabiLP/pp_fp01/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2023. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/joao/Desktop/GabiLP/pp_fp01/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'pp_fp01 1.0-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/13/docs/api' 'C:/Users/joao/Desktop/GabiLP/pp_fp01/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'pp_fp01 1.0-SNAPSHOT API'
+'C:/Users/joao/Desktop/GabiLP/pp_fp01/src/main/java/aaa.java'
+'C:/Users/joao/Desktop/GabiLP/pp_fp01/src/main/java/pp_fp01.java'
+C:\Users\joao\Desktop\GabiLP\pp_fp01\src\main\java\aaa.java = 1677972722082
+C:\Users\joao\Desktop\GabiLP\pp_fp01\src\main\java\pp_fp01.java = 1677972722023
+C:\Users\joao\Desktop\GabiLP\pp_fp01\src\main\java = 1677972669788
+C:\Users\joao\Desktop\GabiLP\pp_fp01\target\site\apidocs\aaa.html = 1677972821460
+C:\Users\joao\Desktop\GabiLP\pp_fp01\target\site\apidocs\allclasses-index.html = 1677972821652
+C:\Users\joao\Desktop\GabiLP\pp_fp01\target\site\apidocs\allpackages-index.html = 1677972821657
+C:\Users\joao\Desktop\GabiLP\pp_fp01\target\site\apidocs\constant-values.html = 1677972821524
+C:\Users\joao\Desktop\GabiLP\pp_fp01\target\site\apidocs\deprecated-list.html = 1677972821582
+C:\Users\joao\Desktop\GabiLP\pp_fp01\target\site\apidocs\element-list = 1677972821490
+C:\Users\joao\Desktop\GabiLP\pp_fp01\target\site\apidocs\help-doc.html = 1677972821680
+C:\Users\joao\Desktop\GabiLP\pp_fp01\target\site\apidocs\index-all.html = 1677972821643
+C:\Users\joao\Desktop\GabiLP\pp_fp01\target\site\apidocs\index.html = 1677972821665
+C:\Users\joao\Desktop\GabiLP\pp_fp01\target\site\apidocs\member-search-index.js = 1677972821628
+C:\Users\joao\Desktop\GabiLP\pp_fp01\target\site\apidocs\member-search-index.zip = 1677972821634
+C:\Users\joao\Desktop\GabiLP\pp_fp01\target\site\apidocs\overview-tree.html = 1677972821570
+C:\Users\joao\Desktop\GabiLP\pp_fp01\target\site\apidocs\package-search-index.js = 1677972821595
+C:\Users\joao\Desktop\GabiLP\pp_fp01\target\site\apidocs\package-search-index.zip = 1677972821618
+C:\Users\joao\Desktop\GabiLP\pp_fp01\target\site\apidocs\package-summary.html = 1677972821500
+C:\Users\joao\Desktop\GabiLP\pp_fp01\target\site\apidocs\package-tree.html = 1677972821517
+C:\Users\joao\Desktop\GabiLP\pp_fp01\target\site\apidocs\package-use.html = 1677972821559
+C:\Users\joao\Desktop\GabiLP\pp_fp01\target\site\apidocs\pp_fp01.html = 1677972821481
+C:\Users\joao\Desktop\GabiLP\pp_fp01\target\site\apidocs\script.js = 1677972821690
+C:\Users\joao\Desktop\GabiLP\pp_fp01\target\site\apidocs\search.js = 1677972821700
+C:\Users\joao\Desktop\GabiLP\pp_fp01\target\site\apidocs\stylesheet.css = 1677972821687
+C:\Users\joao\Desktop\GabiLP\pp_fp01\target\site\apidocs\type-search-index.js = 1677972821622
+C:\Users\joao\Desktop\GabiLP\pp_fp01\target\site\apidocs\type-search-index.zip = 1677972821624

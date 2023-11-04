@@ -1,0 +1,46 @@
+@options
+@packages
+-encoding
+'UTF-8'
+-protected
+-source
+'13'
+-sourcepath
+'C:/Users/joao/Desktop/GabiLP/mavenproject2/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2023. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/joao/Desktop/GabiLP/mavenproject2/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'mavenproject2 1.0-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/13/docs/api' 'C:/Users/joao/Desktop/GabiLP/mavenproject2/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'mavenproject2 1.0-SNAPSHOT API'
+pt.ipp.estg.pp.mavenproject2
+C:\Users\joao\Desktop\GabiLP\mavenproject2\src\main\java = 1677971365863
+C:\Users\joao\Desktop\GabiLP\mavenproject2\target\site\apidocs\allclasses-index.html = 1677972905857
+C:\Users\joao\Desktop\GabiLP\mavenproject2\target\site\apidocs\allpackages-index.html = 1677972905862
+C:\Users\joao\Desktop\GabiLP\mavenproject2\target\site\apidocs\constant-values.html = 1677972905724
+C:\Users\joao\Desktop\GabiLP\mavenproject2\target\site\apidocs\deprecated-list.html = 1677972905784
+C:\Users\joao\Desktop\GabiLP\mavenproject2\target\site\apidocs\element-list = 1677972905691
+C:\Users\joao\Desktop\GabiLP\mavenproject2\target\site\apidocs\help-doc.html = 1677972905876
+C:\Users\joao\Desktop\GabiLP\mavenproject2\target\site\apidocs\index-all.html = 1677972905849
+C:\Users\joao\Desktop\GabiLP\mavenproject2\target\site\apidocs\index.html = 1677972905867
+C:\Users\joao\Desktop\GabiLP\mavenproject2\target\site\apidocs\member-search-index.js = 1677972905839
+C:\Users\joao\Desktop\GabiLP\mavenproject2\target\site\apidocs\member-search-index.zip = 1677972905842
+C:\Users\joao\Desktop\GabiLP\mavenproject2\target\site\apidocs\overview-tree.html = 1677972905767
+C:\Users\joao\Desktop\GabiLP\mavenproject2\target\site\apidocs\package-search-index.js = 1677972905813
+C:\Users\joao\Desktop\GabiLP\mavenproject2\target\site\apidocs\package-search-index.zip = 1677972905828
+C:\Users\joao\Desktop\GabiLP\mavenproject2\target\site\apidocs\script.js = 1677972905885
+C:\Users\joao\Desktop\GabiLP\mavenproject2\target\site\apidocs\search.js = 1677972905888
+C:\Users\joao\Desktop\GabiLP\mavenproject2\target\site\apidocs\stylesheet.css = 1677972905881
+C:\Users\joao\Desktop\GabiLP\mavenproject2\target\site\apidocs\type-search-index.js = 1677972905831
+C:\Users\joao\Desktop\GabiLP\mavenproject2\target\site\apidocs\type-search-index.zip = 1677972905834

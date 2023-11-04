@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fatura xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://faturaCompra.pt/fatura"
+    xsi:schemaLocation="http://faturaCompra.pt/fatura main.xsd"
+    xmlns:p="http://faturaCompra.pt/produto"
+    xmlns:c="http://faturaCompra.pt/cliente">
+    <numero>1000254</numero>
+    <data>2021-10-15</data>
+    <tipo_pagamento>Dinheiro</tipo_pagamento>
+    <c:cliente>
+        <c:nome>Alberto Silva</c:nome>
+        <c:nif>123456789</c:nif>
+        <c:morada>Rua da Escola, nº5 - Felgueiras</c:morada>
+    </c:cliente>
+    <produtos>
+        <p:produto>
+            <p:nome>portátil</p:nome>
+            <p:quantidade>1</p:quantidade>
+            <p:preco_unitario>800.00</p:preco_unitario>
+            <p:iva>10%</p:iva>
+        </p:produto>
+        <p:produto>
+            <p:nome>televisão</p:nome>
+            <p:quantidade>1</p:quantidade>
+            <p:preco_unitario>1050.00</p:preco_unitario>
+            <p:iva>20%</p:iva>
+        </p:produto>
+    </produtos>
+</fatura>

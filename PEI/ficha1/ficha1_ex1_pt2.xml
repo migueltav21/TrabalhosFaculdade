@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tasca>
+    <pizzas>
+        <pizza base="tiny">
+            <name>Veggie Pizza </name>
+            <sigla>VEP</sigla>
+            <toppings>
+                <topping>
+                    <nome>spinach</nome>
+                </topping>
+                <topping>
+                    <nome>cheese</nome>
+                </topping>
+                <topping>
+                    <nome>tomato sauce</nome>
+                </topping>
+            </toppings>
+            <sizes>
+                <size type="S">
+                    <price>6.00</price>
+                </size>
+                <size type="M">
+                    <price>8.00</price>
+                </size>
+                <size type="B">
+                    <price>12.00</price>
+                </size>
+            </sizes>
+        </pizza>
+
+        <pizza base="crispy">
+            <name>Mozzarella Pizza</name>
+            <sigla>MZP</sigla>
+            <toppings>
+                <topping>
+                    <nome>cheese</nome>
+                </topping>
+                <topping>
+                    <nome>oregano</nome>
+                </topping>
+                <topping>
+                    <nome>onion sauce</nome>
+                </topping>
+            </toppings>
+            <sizes>
+                <size type="S">
+                    <price>7.00</price>
+                </size>
+                <size type="M">
+                    <price>8.50</price>
+                </size>
+                <size type="B">
+                    <price>13.00</price>
+                </size>
+            </sizes>
+        </pizza>
+
+        <pizza base="lean">
+            <name>Meat Pizza</name>
+            <sigla>MP</sigla>
+            <toppings>
+                <topping>
+                    <nome>chicken</nome>
+                </topping>
+                <topping>
+                    <nome>oregano</nome>
+                </topping>
+                <topping>
+                    <nome>tomato sauce</nome>
+                </topping>
+            </toppings>
+            <sizes>
+                <size type="S">
+                    <price>6.00</price>
+                </size>
+                <size type="M">
+                    <price>9.00</price>
+                </size>
+                <size type="B">
+                    <price>12.50</price>
+                </size>
+            </sizes>
+        </pizza>
+
+        <pizza base="tiny">
+            <name>ESTG Pizza</name>
+            <sigla>ESTGP</sigla>
+            <toppings>
+                <topping>
+                    <nome>spinach</nome>
+                </topping>
+                <topping>
+                    <nome>cheese</nome>
+                </topping>
+                <topping>
+                    <nome>tomato sauce</nome>
+                </topping>
+                <topping>
+                    <nome>chicken</nome>
+                </topping>
+            </toppings>
+            <sizes>
+                <size type="S">
+                    <price>6.00</price>
+                </size>
+                <size type="M">
+                    <price>8.50</price>
+                </size>
+                <size type="B">
+                    <price>15.00</price>
+                </size>
+            </sizes>
+        </pizza>
+    </pizzas>
+</tasca>
