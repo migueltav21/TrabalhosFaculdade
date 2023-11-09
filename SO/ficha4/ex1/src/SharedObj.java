@@ -2,19 +2,19 @@ public class SharedObj {
     private int number;
     private String name;
 
-    public String getName() {
+    public synchronized String getName() {
         return name;
     }
 
-    public int getNumber() {
+    public synchronized int getNumber() {
         return number;
     }
 
-    public void setName(String n) {
+    public synchronized void setName(String n) {
         name = n;
     }
 
-    public void setNumber(int x) {
+    public synchronized void setNumber(int x) {
         number = x;
     }
 }
