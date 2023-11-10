@@ -1,14 +1,16 @@
-public class CounterThread extends Thread{
+public class CounterThread extends Thread {
     protected Counter counter = null;
 
-    public CounterThread(Counter counter){
+    public CounterThread(Counter counter) {
         this.counter = counter;
     }
 
-    public void run(){
-        for(int i = 0; i<10; i++){
-            counter.add(i);
-            System.out.println(Thread.currentThread().getName() + " added " + i + " to the count.");
+    public void run() {
+        for (int i = 0; i < 10; i++) {
+            synchronized (counter) {
+                counter.add(i);
+                System.out.println(Thread.currentThread().getName() + " added " + i + " to the count.");
+            }
         }
     }
 }

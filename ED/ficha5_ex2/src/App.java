@@ -65,6 +65,7 @@ public class App {
         lista2.addToFront("miguel");
         lista2.addToFront("joao");
         lista2.addToFront("rui");
+        lista2.addToFront("Pedro");
         System.out.println(lista2.toString());
         System.out.println("--------------------");
         // Criação do array

@@ -8,18 +8,20 @@ public class Run extends Thread {
     public void run() {
         String myname = Thread.currentThread().getName();
         try {
-            while (true) {
-                if (Thread.interrupted())
-                    return;
-                Thread.sleep(1000);
-                System.out.println("[" + myname + "]Numbre:" + share.getNumber() + "(" + share.getName() + ")");
+            while (!Thread.interrupted()) {
+                printSharedObjectInfo(myname);
             }
         } catch (InterruptedException e) {
+            System.out.println("Thread interrompida");
         }
     }
 
-    public void setShare(SharedObj s) {
-        share = s;
+    private synchronized void printSharedObjectInfo(String myname) throws InterruptedException {
+        Thread.sleep(1000);
+        System.out.println("[" + myname + "]Number:" + share.getNumber() + "(" + share.getName() + ")");
     }
 
-}
+        public void setShare(SharedObj s) {
+            share = s;
+        }
+    }
