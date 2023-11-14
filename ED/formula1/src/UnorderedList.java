@@ -2,7 +2,7 @@ import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class UnorderedList<T extends Comparable<T>> implements UnorderedListADT<T> {
+public class UnorderedList<T> implements UnorderedListADT<T> {
     private No<T> front;
     private No<T> rear;
     private int size;
