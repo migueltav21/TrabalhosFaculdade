@@ -14,7 +14,7 @@ public class OrderedList<T extends Comparable<T>> implements OrderedListADT<T> {
         size = 0;
     }
 
-    public int getModCount(){
+    public int getModCount() {
         return modCount;
     }
 
@@ -82,41 +82,6 @@ public class OrderedList<T extends Comparable<T>> implements OrderedListADT<T> {
 
         return null;
     }
-
-    /*
-    @Override
-    public void add(T element) {
-        if (!(element instanceof Comparable)) {
-            throw new IllegalArgumentException("Element must implement Comparable");
-        }
-    
-        No<T> newNode = new No<>(element);
-    
-        if (isEmpty()) {
-            front = newNode;
-            rear = newNode;
-        } else if (((Comparable<T>) element).compareTo(front.getElemento()) <= 0) {
-            newNode.setProximo(front);
-            front.setAnterior(newNode);
-            front = newNode;
-        } else if (((Comparable<T>) element).compareTo(rear.getElemento()) >= 0) {
-            newNode.setAnterior(rear);
-            rear.setProximo(newNode);
-            rear = newNode;
-        } else {
-            No<T> current = front;
-            while (current != null && ((Comparable<T>) element).compareTo(current.getElemento()) > 0) {
-                current = current.getProximo();
-            }
-            newNode.setAnterior(current.getAnterior());
-            newNode.setProximo(current);
-            current.getAnterior().setProximo(newNode);
-            current.setAnterior(newNode);
-        }
-        size++;
-        modCount++;
-    }
-     */
 
     @Override
     public T first() {
@@ -190,25 +155,61 @@ public class OrderedList<T extends Comparable<T>> implements OrderedListADT<T> {
         modCount++;
     }
 
-@Override
-public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("[");
-    
-    No<T> current = front;
-    while (current != null) {
-        sb.append(current.getElemento());
-        if (current.getProximo() != null) {
-            sb.append(", ");
-        }
-        current = current.getProximo();
-    }
-    
-    sb.append("]");
-    return sb.toString();
-}
+    /*
+     * @Override
+     * public void add(T element) {
+     * if (!(element instanceof Comparable)) {
+     * throw new IllegalArgumentException("Element must implement Comparable");
+     * }
+     * 
+     * No<T> newNode = new No<>(element);
+     * 
+     * if (isEmpty()) {
+     * front = newNode;
+     * rear = newNode;
+     * } else if (((Comparable<T>) element).compareTo(front.getElemento()) <= 0) {
+     * newNode.setProximo(front);
+     * front.setAnterior(newNode);
+     * front = newNode;
+     * } else if (((Comparable<T>) element).compareTo(rear.getElemento()) >= 0) {
+     * newNode.setAnterior(rear);
+     * rear.setProximo(newNode);
+     * rear = newNode;
+     * } else {
+     * No<T> current = front;
+     * while (current != null && ((Comparable<T>)
+     * element).compareTo(current.getElemento()) > 0) {
+     * current = current.getProximo();
+     * }
+     * newNode.setAnterior(current.getAnterior());
+     * newNode.setProximo(current);
+     * current.getAnterior().setProximo(newNode);
+     * current.setAnterior(newNode);
+     * }
+     * size++;
+     * modCount++;
+     * }
+     */
 
-private class OrderedListIterator implements Iterator<T> {
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+
+        No<T> current = front;
+        while (current != null) {
+            sb.append(current.getElemento());
+            if (current.getProximo() != null) {
+                sb.append(", ");
+            }
+            current = current.getProximo();
+        }
+
+        sb.append("]");
+        return sb.toString();
+    }
+
+    private class OrderedListIterator implements Iterator<T> {
         private No<T> current = front;
         private int expectedModCount = modCount;
 
@@ -231,18 +232,18 @@ private class OrderedListIterator implements Iterator<T> {
         }
     }
 
-        public T[] invertElements() {
-            T[] elements = (T[]) new Object[size];
-    
-            No<T> current = rear;
-            int index = 0;
-    
-            while (current != null) {
-                elements[index] = current.getElemento();
-                current = current.getAnterior();
-                index++;
-            }
-    
-            return elements;
+    public T[] invertElements() {
+        T[] elements = (T[]) new Object[size];
+
+        No<T> current = rear;
+        int index = 0;
+
+        while (current != null) {
+            elements[index] = current.getElemento();
+            current = current.getAnterior();
+            index++;
         }
+
+        return elements;
     }
+}
