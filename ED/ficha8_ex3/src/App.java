@@ -60,7 +60,7 @@ public class App {
         numeros.add(45);
         numeros.add(1);
         System.out.println(numeros.toString());
-        SortingandSearching.bubbleSort(numeros.getArray());
+        SortingandSearching.insertionSort(numeros.getArray());
     }
 
 }
