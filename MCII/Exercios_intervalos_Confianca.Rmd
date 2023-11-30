@@ -1,0 +1,92 @@
+# Exercicio 50
+
+ Precos <- data.frame(
+ CidadeA=c(82, 110, 94, 115, 138, 102, 138),
+ CidadeB=c(84, 101, 94, 105, 99, 90, 84),
+ CidadeC = c(100, 131, 110, 138, 111, 132, 120)
+ );
+ 
+ View(Precos)
+ boxplot(Precos, col = c("skyblue", "lightgreen", "red"), names = c("Cidade A", "Cidade B", "Cidade C"));
+
+summary(Precos$CidadeA)
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   82.0    98.0   110.0   111.3   126.5   138.0
+   
+ summary(Precos$CidadeB)
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  84.00   87.00   94.00   93.86  100.00  105.00 
+  
+ summary(Precos$CidadeC)
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  100.0   110.5   120.0   120.3   131.5   138.0 
+  
+sd(Precos$CidadeA)
+[1] 21.15588
+ sd(Precos$CidadeB)
+[1] 8.275034
+ sd(Precos$CidadeC)
+[1] 13.96083
+
+sd(Precos$CidadeA);
+
+ coef_variacao <- (sd(Precos$CidadeA) / (mean(Precos$CidadeA)))
+ print(coef_variacao)
+[1] 0.1901042
+
+#Exercicio 51
+
+ potencia = c(8.9, 9.1, 9.2, 9.1, 8.4, 9.5, 9.0, 9.6, 9.3, 9.3, 8.9, 9.7, 8.7, 9.4, 8.5, 8.9, 8.4, 9.5,
+9.3, 8.8, 9.4, 8.9, 9.3, 9.0, 9.2, 9.1, 9.8, 9.6, 9.3, 9.2, 9.1, 9.6, 9.8, 9.5, 10.0, 9.3)
+ mean(potencia)
+[1] 9.211111
+
+
+ t.test(potencia, conf.level = 0.95)
+
+	One Sample t-test
+
+data:  potencia
+t = 144, df = 35, p-value < 2.2e-16
+alternative hypothesis: true mean is not equal to 0
+95 percent confidence interval:
+ 9.081252 9.340970
+sample estimates:
+mean of x 
+ 9.211111 
+ 
+ # Exercicio 52
+ 
+ tempo<-c(39,41,42,41,34,45,40,46,43,43,39,47,37,44,35,39,34,45,43,38,44,39,43,40,42,41,48,46,43,42,41,46,48,45,50,43)
+ 
+ 
+ t.test(tempo,conf.level = 0.95)
+
+	One Sample t-test
+
+data:  tempo
+t = 65.833, df = 35, p-value < 2.2e-16
+alternative hypothesis: true mean is not equal to 0
+95 percent confidence interval:
+ 40.81252 43.40970
+sample estimates:
+mean of x 
+ 42.11111 
+
+# Exercicio 53
+
+> tempo_A <- c(11,12, 10, 15, 13, 11,12, 14)
+> tempo_B <- c(12, 9, 11, 13, 9, 10, 11, 12)
+> t.test(tempo_A, tempo_B, conf.level = 0.99, var.equal = TRUE, paired = FALSE)
+
+	Two Sample t-test
+
+data:  tempo_A and tempo_B
+t = 1.755, df = 14, p-value = 0.1011
+alternative hypothesis: true difference in means is not equal to 0
+99 percent confidence interval:
+ -0.9572937  3.7072937
+sample estimates:
+mean of x mean of y 
+   12.250    10.875 
+
