@@ -1,0 +1,12 @@
+{
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.project.referencedLibraries": [
+        "app/build/libs/WorkSchedule.jar",
+        "c:\\Users\\Rui Tavares\\Desktop\\WorkSchedule.jar"
+    ],
+    "java.project.sourcePaths": [
+        "src"
+    ],
+    "java.project.outputPath": "bin",
+    "java.compile.nullAnalysis.mode": "automatic"
+}
