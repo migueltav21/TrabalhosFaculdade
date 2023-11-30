@@ -53,7 +53,6 @@ public class CircularArrayQueue<T> implements QueueADT<T> {
         size--;
         return elemento;
     }
-    
 
     @Override
     public T first() {
