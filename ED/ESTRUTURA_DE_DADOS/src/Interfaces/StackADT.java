@@ -1,4 +1,4 @@
-package Stacks;
+package Interfaces;
 /**
  *
  * @author Rui Tavares

@@ -1,5 +1,6 @@
 package Queues;
 
+import Interfaces.QueueADT;
 import Nodes.Node;
 
 public class LinkedQueue<T> implements QueueADT<T> {

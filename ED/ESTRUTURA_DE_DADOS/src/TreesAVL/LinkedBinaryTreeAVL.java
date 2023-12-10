@@ -1,10 +1,9 @@
-package Trees;
+package TreesAVL;
 
 import java.util.Iterator;
 
-import Exceptions.*;
+import Exceptions.ElementNotFoundException;
 import Interfaces.BinaryTreeADT;
-import Lists.ArrayUnorderedList;
 import Lists.DoublyUnorderedLinkedList;
 import Queues.LinkedQueue;
 
@@ -12,14 +11,14 @@ import Queues.LinkedQueue;
  * LinkedBinaryTree implements the BinaryTreeADT interface
  *
  */
-public class LinkedBinaryTree<T> implements BinaryTreeADT<T> {
+public class LinkedBinaryTreeAVL<T> implements BinaryTreeADT<T> {
     protected int count;
-    protected BinaryTreeNode<T> root;
+    protected AVLTreeNode<T> root;  // Alteração aqui
 
     /**
      * Creates an empty binary tree.
      */
-    public LinkedBinaryTree() {
+    public LinkedBinaryTreeAVL() {
         count = 0;
         root = null;
     }
@@ -30,9 +29,9 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T> {
      * @param element the element that will become the root of the
      *                new binary tree
      */
-    public LinkedBinaryTree(T element) {
+    public LinkedBinaryTreeAVL(T element) {
         count = 1;
-        root = new BinaryTreeNode<T>(element);
+        root = new AVLTreeNode<T>(element);  // Alteração aqui
     }
 
     @Override
@@ -72,7 +71,7 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T> {
      */
     @Override
     public T find(T targetElement) throws ElementNotFoundException {
-        BinaryTreeNode<T> current = findAgain(targetElement, root);
+        AVLTreeNode<T> current = findAgain(targetElement, root);
 
         if (current == null)
             throw new ElementNotFoundException("binary tree");
@@ -87,14 +86,14 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T> {
      * @param targetElement the element being sought in this tree
      * @param next          the element to begin searching from
      */
-    private BinaryTreeNode<T> findAgain(T targetElement, BinaryTreeNode<T> next) {
+    private AVLTreeNode<T> findAgain(T targetElement, AVLTreeNode<T> next) {  // Alteração aqui
         if (next == null)
             return null;
 
         if (next.element.equals(targetElement))
             return next;
 
-        BinaryTreeNode<T> temp = findAgain(targetElement, next.left);
+        AVLTreeNode<T> temp = findAgain(targetElement, next.left);
 
         if (temp == null)
             temp = findAgain(targetElement, next.right);
@@ -124,7 +123,7 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T> {
      *                 for this traversal
      * @param tempList the temporary list for use in this traversal
      */
-    protected void inorder(BinaryTreeNode<T> node,
+    protected void inorder(AVLTreeNode<T> node,  // Alteração aqui
             DoublyUnorderedLinkedList<T> tempList) {
         if (node != null) {
             inorder(node.left, tempList);
@@ -133,6 +132,7 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T> {
         }
     }
 
+  
     @Override
     public Iterator<T> iteratorPreOrder() {
         DoublyUnorderedLinkedList<T> tempList = new DoublyUnorderedLinkedList<T>();
@@ -141,7 +141,7 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T> {
         return tempList.iterator();
     }
 
-    protected void preOrder(BinaryTreeNode<T> node,
+    protected void preOrder(AVLTreeNode<T> node,
             DoublyUnorderedLinkedList<T> tempList) {
         if (node != null) {
             tempList.addToRear(node.element);
@@ -158,7 +158,7 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T> {
         return tempList.iterator();
     }
 
-    protected void postOrder(BinaryTreeNode<T> node,
+    protected void postOrder(AVLTreeNode<T> node,
             DoublyUnorderedLinkedList<T> tempList) {
         if (node != null) {
             postOrder(node.left, tempList);
@@ -175,13 +175,13 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T> {
         return tempList.iterator();
     }
 
-    protected void levelOrder(BinaryTreeNode<T> node, DoublyUnorderedLinkedList<T> tempList) {
-        LinkedQueue<BinaryTreeNode<T>> queue = new LinkedQueue<>();
+    protected void levelOrder(AVLTreeNode<T> node, DoublyUnorderedLinkedList<T> tempList) {
+        LinkedQueue<AVLTreeNode<T>> queue = new LinkedQueue<>();
         if (node != null) {
             queue.enqueue(node);
         }
         while (!queue.isEmpty()) {
-            BinaryTreeNode<T> head = queue.dequeue();
+            AVLTreeNode<T> head = queue.dequeue();
             tempList.addToRear(head.element);
 
             if (head.left != null) {
@@ -193,5 +193,4 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T> {
             }
         }
     }
-
 }

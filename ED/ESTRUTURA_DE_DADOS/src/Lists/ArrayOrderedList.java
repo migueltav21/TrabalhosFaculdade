@@ -1,5 +1,7 @@
 package Lists;
 
+import Interfaces.OrderedListADT;
+
 public class ArrayOrderedList<T extends Comparable<T>> extends ArrayList<T> implements OrderedListADT<T> {
 
     public ArrayOrderedList() {

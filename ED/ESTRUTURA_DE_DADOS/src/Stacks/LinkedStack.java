@@ -1,4 +1,5 @@
 package Stacks;
+import Interfaces.StackADT;
 import Nodes.Node;
 
 public class LinkedStack<T> implements StackADT<T> {

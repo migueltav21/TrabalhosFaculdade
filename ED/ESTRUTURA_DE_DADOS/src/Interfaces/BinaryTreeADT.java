@@ -1,4 +1,4 @@
-package Trees;
+package Interfaces;
 
 import java.util.Iterator;
 

@@ -1,4 +1,4 @@
-package Lists;
+package Interfaces;
 
 public interface UnorderedListADT<T> extends ListADT<T> {
     /**

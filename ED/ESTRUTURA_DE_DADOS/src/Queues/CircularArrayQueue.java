@@ -2,6 +2,8 @@ package Queues;
 
 import java.util.NoSuchElementException;
 
+import Interfaces.QueueADT;
+
 public class CircularArrayQueue<T> implements QueueADT<T> {
     private T[] queue;
     private int front;

@@ -4,6 +4,8 @@ import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+import Interfaces.ListADT;
+
 public abstract class ArrayList<T> implements ListADT<T> {
     private final String EMPTY_ERROR = "This list is empty";
     private T[] array;

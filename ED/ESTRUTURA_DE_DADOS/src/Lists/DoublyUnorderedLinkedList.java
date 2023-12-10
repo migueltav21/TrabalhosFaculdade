@@ -2,6 +2,7 @@ package Lists;
 
 import java.util.NoSuchElementException;
 
+import Interfaces.UnorderedListADT;
 import Nodes.DoubleNode;
 
 public class DoublyUnorderedLinkedList<T> extends DoublyLinkedList<T> implements UnorderedListADT<T> {

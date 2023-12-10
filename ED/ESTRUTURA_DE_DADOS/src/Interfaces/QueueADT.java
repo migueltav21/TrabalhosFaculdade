@@ -1,4 +1,4 @@
-package Queues;
+package Interfaces;
 
 public interface QueueADT<T> {
  /**

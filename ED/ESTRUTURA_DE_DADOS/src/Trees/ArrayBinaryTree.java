@@ -3,7 +3,9 @@ package Trees;
 import java.util.Iterator;
 
 import Exceptions.ElementNotFoundException;
+import Interfaces.BinaryTreeADT;
 import Lists.ArrayUnorderedList;
+import Lists.DoublyUnorderedLinkedList;
 import Queues.CircularArrayQueue;
 
 public class ArrayBinaryTree<T> implements BinaryTreeADT<T> {
@@ -31,6 +33,16 @@ public class ArrayBinaryTree<T> implements BinaryTreeADT<T> {
         tree[0] = element;
     }
 
+
+    protected void expandCapacity()
+   {
+      T[] temp = (T[]) new Object[tree.length * 2];
+      for (int ct=0; ct < tree.length; ct++)
+         temp[ct] = tree[ct];
+      tree = temp;
+   }
+
+   
     @Override
     public T getRoot() {
         return tree[0];
@@ -89,7 +101,7 @@ public class ArrayBinaryTree<T> implements BinaryTreeADT<T> {
      */
     @Override
     public Iterator<T> iteratorInOrder() {
-        ArrayUnorderedList<T> templist = new ArrayUnorderedList<T>();
+        DoublyUnorderedLinkedList<T> templist = new DoublyUnorderedLinkedList<T>();
         inorder(0, templist);
         return templist.iterator();
     }
@@ -100,7 +112,7 @@ public class ArrayBinaryTree<T> implements BinaryTreeADT<T> {
      * @param node     the node used in the traversal
      * @param templist the temporary list used in the traversal
      */
-    protected void inorder(int node, ArrayUnorderedList<T> templist) {
+    protected void inorder(int node, DoublyUnorderedLinkedList<T> templist) {
         if (node < tree.length)
             if (tree[node] != null) {
                 inorder(node * 2 + 1, templist);
@@ -111,12 +123,12 @@ public class ArrayBinaryTree<T> implements BinaryTreeADT<T> {
 
     @Override
     public Iterator<T> iteratorPreOrder() {
-        ArrayUnorderedList<T> templist = new ArrayUnorderedList<T>();
+        DoublyUnorderedLinkedList<T> templist = new DoublyUnorderedLinkedList<T>();
         preorder(0, templist);
         return templist.iterator();
     }
 
-    protected void preorder(int node, ArrayUnorderedList<T> templist) {
+    protected void preorder(int node, DoublyUnorderedLinkedList<T> templist) {
         if (node < tree.length)
             if (tree[node] != null) {
                 templist.addToRear(tree[node]);
@@ -127,12 +139,12 @@ public class ArrayBinaryTree<T> implements BinaryTreeADT<T> {
 
     @Override
     public Iterator<T> iteratorPostOrder() {
-        ArrayUnorderedList<T> templist = new ArrayUnorderedList<T>();
+        DoublyUnorderedLinkedList<T> templist = new DoublyUnorderedLinkedList<T>();
         postorder(0, templist);
         return templist.iterator();
     }
 
-    protected void postorder(int node, ArrayUnorderedList<T> templist) {
+    protected void postorder(int node, DoublyUnorderedLinkedList<T> templist) {
         if (node < tree.length)
             if (tree[node] != null) {
                 postorder(node * 2 + 1, templist);
@@ -143,12 +155,12 @@ public class ArrayBinaryTree<T> implements BinaryTreeADT<T> {
 
     @Override
     public Iterator<T> iteratorLevelOrder() {
-        ArrayUnorderedList<T> templist = new ArrayUnorderedList<T>();
+        DoublyUnorderedLinkedList<T> templist = new DoublyUnorderedLinkedList<T>();
         levelOrder(0, templist);
         return templist.iterator();
     }
 
-    protected void levelOrder(int node, ArrayUnorderedList<T> tempList) {
+    protected void levelOrder(int node, DoublyUnorderedLinkedList<T> tempList) {
         CircularArrayQueue<T> queue = new CircularArrayQueue<>();
         if (tree[node] != null) {
             queue.enqueue(tree[node]);

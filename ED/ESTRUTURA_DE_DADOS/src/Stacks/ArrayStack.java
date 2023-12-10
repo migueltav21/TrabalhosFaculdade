@@ -1,5 +1,7 @@
 package Stacks;
 
+import Interfaces.StackADT;
+
 public class ArrayStack<T> implements StackADT<T> {
 
     /**
