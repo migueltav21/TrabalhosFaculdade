@@ -1,16 +1,16 @@
 package TreesAVL;
 
 public class AVLTreeNode<T> {
-    T element;
-    AVLTreeNode<T> left;
-    AVLTreeNode<T> right;
-    int height;
+    protected T element;
+    protected AVLTreeNode<T> left;
+    protected AVLTreeNode<T> right;
+    protected int height;
 
     public AVLTreeNode(T element) {
         this.element = element;
         this.left = null;
         this.right = null;
-        this.height = 1; // Inicializamos a altura como 1 para o novo nó
+        this.height = 0; // Inicializamos a altura como 0 para o novo nó
     }
 
     public int numChildren() {

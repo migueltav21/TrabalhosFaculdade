@@ -9,6 +9,7 @@ public class NumberPrintingThread extends Thread {
         numInicial = num;
         numDeImpressoes = num2;
         semaphore = semaforo;
+//aaaaa
     }
 
     public void run() {
