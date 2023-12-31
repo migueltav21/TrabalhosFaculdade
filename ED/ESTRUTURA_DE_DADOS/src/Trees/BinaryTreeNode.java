@@ -14,7 +14,7 @@ public class BinaryTreeNode<T> {
      * @param obj the element that will become a part of
      *            the new tree node
      */
-    BinaryTreeNode(T obj) {
+    protected BinaryTreeNode(T obj) {
         element = obj;
         left = null;
         right = null;
@@ -33,5 +33,29 @@ public class BinaryTreeNode<T> {
         if (right != null)
             children = children + 1 + right.numChildren();
         return children;
+    }
+
+    public T getElement() {
+        return element;
+    }
+
+    public void setElement(T element) {
+        this.element = element;
+    }
+
+    public BinaryTreeNode<T> getLeft() {
+        return left;
+    }
+
+    public void setLeft(BinaryTreeNode<T> left) {
+        this.left = left;
+    }
+
+    public BinaryTreeNode<T> getRight() {
+        return right;
+    }
+
+    public void setRight(BinaryTreeNode<T> right) {
+        this.right = right;
     }
 }
