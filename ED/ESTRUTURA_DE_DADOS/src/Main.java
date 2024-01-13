@@ -1,6 +1,7 @@
 import java.util.Iterator;
 
 import Exceptions.EmptyCollectionException;
+import Graphs.Network;
 import Heaps.ArrayHeap;
 import Heaps.PriorityQueue;
 import Trees.*;
@@ -8,6 +9,88 @@ import TreesAVL.LinkedBinarySearchTreeAVL;
 
 public class Main {
     public static void main(String[] args) {
+
+        Network<String> graph = new Network<>();
+
+        // Adicione vértices
+        graph.addVertex("A");
+        graph.addVertex("B");
+        graph.addVertex("C");
+        graph.addVertex("D");
+        graph.addVertex("E");
+        graph.addVertex("F");
+        graph.addVertex("G");
+        graph.addVertex("H");
+        graph.addVertex("I");
+
+        // Adicione arestas
+        graph.addEdge("A", "B", 1.0);
+        graph.addEdge("A", "C", 2.0);
+        graph.addEdge("A", "D", 1.0);
+        graph.addEdge("A", "E", 4.0);
+        graph.addEdge("B", "F", 2.0);
+        graph.addEdge("F", "H", 1.0);
+        graph.addEdge("D", "G", 7.0);
+        graph.addEdge("G", "I", 8.0);
+        graph.addEdge("H", "I", 1.0);
+
+        double shortestPathWeight = graph.shortestPathWeight("D", "I");
+
+        System.out.println("Shortest path weight from " + "A" + " to " + "D" + ": " + shortestPathWeight);
+        Iterator<String> shortestPath = graph.iteratorShortestPath("I", "D");
+
+        // Imprima o caminho mais curto
+        System.out.println("Caminho mais curto de D para I:");
+
+        while (shortestPath.hasNext()) {
+            System.out.print(shortestPath.next());
+
+            if (shortestPath.hasNext()) {
+                System.out.print(" -> ");
+            }
+        }
+
+        // Imprima o grafo
+        System.out.println("\nGraph:");
+
+        // Execute BFS a partir de um vértice
+        System.out.println("DFS from A:");
+        Iterator<String> bfsIterator = graph.iteratorDFS("A");
+        while (bfsIterator.hasNext()) {
+            System.out.print(bfsIterator.next() + " ");
+        }
+        System.out.println();
+
+        System.out.println("BFS from B:");
+        Iterator<String> bfsIterator2 = graph.iteratorBFS("B");
+        while (bfsIterator2.hasNext()) {
+            System.out.print(bfsIterator2.next() + " ");
+        }
+        System.out.println();
+
+        System.out.println("BFS from C:");
+        Iterator<String> bfsIterator3 = graph.iteratorBFS("C");
+        while (bfsIterator3.hasNext()) {
+            System.out.print(bfsIterator3.next() + " ");
+        }
+        System.out.println();
+
+        // Execute DFS a partir de um vértice
+        System.out.println("DFS from D:");
+        Iterator<String> dfsIterator4 = graph.iteratorBFS("D");
+        while (dfsIterator4.hasNext()) {
+            System.out.print(dfsIterator4.next() + " ");
+        }
+        System.out.println();
+
+        // Remova um vértice
+        graph.removeVertex("B");
+
+        // Imprima o grafo após a remoção
+        System.out.println("Graph after removing vertex B:");
+
+        System.out.println("--------------------------------------------------------------");
+
         // Crie uma instância da sua árvore binária de busca
         ArrayBinarySearchTree<Integer> binarySearchTree = new ArrayBinarySearchTree<>();
         LinkedBinarySearchTreeAVL<Integer> tree = new LinkedBinarySearchTreeAVL<>();
