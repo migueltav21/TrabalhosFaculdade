@@ -33,11 +33,20 @@ public class Main {
         graph.addEdge("D", "G", 7.0);
         graph.addEdge("G", "I", 8.0);
         graph.addEdge("H", "I", 1.0);
+        graph.addEdge("B", "A", 1.0);
+        graph.addEdge("C", "A", 2.0);
+        graph.addEdge("D", "A", 1.0);
+        graph.addEdge("E", "A", 4.0);
+        graph.addEdge("F", "B", 2.0);
+        graph.addEdge("H", "F", 1.0);
+        graph.addEdge("G", "D", 7.0);
+        graph.addEdge("I", "G", 8.0);
+        graph.addEdge("I", "H", 1.0);
+        System.out.println(graph.isConnected());
+        double shortestPathWeight = graph.shortestPathWeight("A", "I");
 
-        double shortestPathWeight = graph.shortestPathWeight("D", "I");
-
-        System.out.println("Shortest path weight from " + "A" + " to " + "D" + ": " + shortestPathWeight);
-        Iterator<String> shortestPath = graph.iteratorShortestPath("I", "D");
+        System.out.println("Shortest path weight from " + "A" + " to " + "I" + ": " + shortestPathWeight);
+        Iterator<String> shortestPath = graph.iteratorShortestPath("A", "I");
 
         // Imprima o caminho mais curto
         System.out.println("Caminho mais curto de D para I:");

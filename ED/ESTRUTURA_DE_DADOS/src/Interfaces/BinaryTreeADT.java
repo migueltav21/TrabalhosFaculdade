@@ -2,6 +2,10 @@ package Interfaces;
 
 import java.util.Iterator;
 
+/**
+ * BinaryTreeADT defines the interface to a binary tree.
+ *
+ */
 public interface BinaryTreeADT<T>
 {
  /**

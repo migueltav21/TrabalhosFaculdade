@@ -8,8 +8,8 @@ import Interfaces.BinarySearchTreeADT;
  * ArrayBinarySearchTree implements a binary search tree
  * using an array.
  *
+ * @param <T> the type of elements stored in the tree
  */
-
 public class ArrayBinarySearchTree<T> extends ArrayBinaryTree<T>
         implements BinarySearchTreeADT<T> {
     protected int height;
@@ -86,6 +86,13 @@ public class ArrayBinarySearchTree<T> extends ArrayBinaryTree<T>
         count++;
     }
 
+    /**
+     * Removes the specified element from this binary search tree.
+     *
+     * @param targetElement the element to be removed from the tree
+     * @return the removed element
+     * @throws ElementNotFoundException if the target element is not found in the tree
+     */
     @Override
     public T removeElement(T targetElement) throws ElementNotFoundException {
         T result = null;
@@ -116,8 +123,14 @@ public class ArrayBinarySearchTree<T> extends ArrayBinaryTree<T>
 
         return result;
 
-    } // method removeElement
+    }
 
+    /**
+     * Removes all occurrences of the specified element from this binary search tree.
+     *
+     * @param targetElement the element to be removed from the tree
+     * @throws ElementNotFoundException if the target element is not found in the tree
+     */
     @Override
     public void removeAllOccurrences (T targetElement) throws
     ElementNotFoundException 
@@ -127,8 +140,14 @@ public class ArrayBinarySearchTree<T> extends ArrayBinaryTree<T>
         while (contains(targetElement))
            removeElement(targetElement);
  
-    }  // method removeAllOccurrences
- 
+    }
+
+    /**
+     * Removes and returns the smallest element from this binary search tree.
+     *
+     * @return the smallest element in the tree
+     * @throws EmptyCollectionException if the tree is empty
+     */
     @Override
     public T removeMin() throws EmptyCollectionException 
    {
@@ -155,6 +174,12 @@ public class ArrayBinarySearchTree<T> extends ArrayBinaryTree<T>
       return result;
    }  // method removeMin
 
+    /**
+     * Removes and returns the largest element from this binary search tree.
+     *
+     * @return the largest element in the tree
+     * @throws EmptyCollectionException if the tree is empty
+     */
     @Override
     public T removeMax() throws EmptyCollectionException 
     {
@@ -170,17 +195,23 @@ public class ArrayBinarySearchTree<T> extends ArrayBinaryTree<T>
           {
              previousIndex = currentIndex;
              currentIndex = currentIndex * 2 + 2;
-          } //while
+          }
           result = tree[previousIndex] ;
           replace(previousIndex);
-       } //else
+       }
  
        count--;
  
        return result;
-    }  // method removeMax
- 
+    }
 
+
+    /**
+     * Returns the smallest element in this binary search tree without removing it.
+     *
+     * @return the smallest element in the tree
+     * @throws EmptyCollectionException if the tree is empty
+     */
     @Override
     public T findMin() throws EmptyCollectionException 
    {
@@ -196,6 +227,12 @@ public class ArrayBinarySearchTree<T> extends ArrayBinaryTree<T>
       }
       return result;
    }
+    /**
+     * Returns the largest element in this binary search tree without removing it.
+     *
+     * @return the largest element in the tree
+     * @throws EmptyCollectionException if the tree is empty
+     */
     @Override
     public T findMax() throws EmptyCollectionException 
     {
@@ -219,44 +256,35 @@ public class ArrayBinarySearchTree<T> extends ArrayBinaryTree<T>
  * @param index the index of the element to be replaced
  */
 protected void replace(int index) {
-    // Find the index of the last element in the tree
     int lastIndex = maxIndex;
 
-    // Replace the element at the specified index with the last element
     tree[index] = tree[lastIndex];
 
-    // Set the last element to null
+
     tree[lastIndex] = null;
 
-    // Update maxIndex if the removed element was the last element
     if (index == lastIndex) {
         maxIndex--;
 
-        // Update height based on the new maxIndex
         height = (int) (Math.log(maxIndex + 1) / Math.log(2)) + 1;
         return;
     }
 
-    // Update maxIndex if the removed element was not the last element
     if (lastIndex % 2 == 0) {
-        // The last element was a right child, so check the left child
         if (tree[index * 2 + 1] != null) {
             maxIndex = Math.max(maxIndex, index * 2 + 1);
         } else {
-            // The left child is null, so update maxIndex based on the parent
             maxIndex = index * 2;
         }
     } else {
-        // The last element was a left child, so check the right child
         if (tree[index * 2 + 2] != null) {
             maxIndex = Math.max(maxIndex, index * 2 + 2);
         } else {
-            // The right child is null, so update maxIndex based on the parent
+
             maxIndex = (index - 1) / 2;
         }
     }
 
-    // Update height based on the new maxIndex
     height = (int) (Math.log(maxIndex + 1) / Math.log(2)) + 1;
 }
 

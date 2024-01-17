@@ -34,21 +34,42 @@ public class LinkedBinaryTreeAVL<T> implements BinaryTreeADT<T> {
         root = new AVLTreeNode<T>(element);  // Alteração aqui
     }
 
+    /**
+     * Gets the element stored in the root of the AVL binary tree.
+     *
+     * @return the element in the root of the AVL binary tree
+     */
     @Override
     public T getRoot() {
         return root.element;
     }
 
+    /**
+     * Checks if the AVL binary tree is empty.
+     *
+     * @return true if the AVL binary tree is empty, false otherwise
+     */
     @Override
     public boolean isEmpty() {
         return count == 0;
     }
 
+    /**
+     * Gets the number of elements in the AVL binary tree.
+     *
+     * @return the number of elements in the AVL binary tree
+     */
     @Override
     public int size() {
         return count;
     }
 
+    /**
+     * Checks if the AVL binary tree contains the specified target element.
+     *
+     * @param elementoAlvo the element to check for in the AVL binary tree
+     * @return true if the AVL binary tree contains the target element, false otherwise
+     */
     @Override
     public boolean contains(T elementoAlvo) {
         try {
@@ -132,7 +153,12 @@ public class LinkedBinaryTreeAVL<T> implements BinaryTreeADT<T> {
         }
     }
 
-  
+
+    /**
+     * Performs a pre-order traversal on this AVL binary tree.
+     *
+     * @return a pre-order iterator over this AVL binary tree
+     */
     @Override
     public Iterator<T> iteratorPreOrder() {
         DoublyUnorderedLinkedList<T> tempList = new DoublyUnorderedLinkedList<T>();
@@ -141,6 +167,12 @@ public class LinkedBinaryTreeAVL<T> implements BinaryTreeADT<T> {
         return tempList.iterator();
     }
 
+    /**
+     * Performs a recursive pre-order traversal.
+     *
+     * @param node     the node to be used as the root for this traversal
+     * @param tempList the temporary list for use in this traversal
+     */
     protected void preOrder(AVLTreeNode<T> node,
             DoublyUnorderedLinkedList<T> tempList) {
         if (node != null) {
@@ -150,6 +182,11 @@ public class LinkedBinaryTreeAVL<T> implements BinaryTreeADT<T> {
         }
     }
 
+    /**
+     * Performs a post-order traversal on this AVL binary tree.
+     *
+     * @return a post-order iterator over this AVL binary tree
+     */
     @Override
     public Iterator<T> iteratorPostOrder() {
         DoublyUnorderedLinkedList<T> tempList = new DoublyUnorderedLinkedList<T>();
@@ -158,6 +195,12 @@ public class LinkedBinaryTreeAVL<T> implements BinaryTreeADT<T> {
         return tempList.iterator();
     }
 
+    /**
+     * Performs a recursive post-order traversal.
+     *
+     * @param node     the node to be used as the root for this traversal
+     * @param tempList the temporary list for use in this traversal
+     */
     protected void postOrder(AVLTreeNode<T> node,
             DoublyUnorderedLinkedList<T> tempList) {
         if (node != null) {
@@ -167,6 +210,11 @@ public class LinkedBinaryTreeAVL<T> implements BinaryTreeADT<T> {
         }
     }
 
+    /**
+     * Performs a level-order traversal on this AVL binary tree.
+     *
+     * @return a level-order iterator over this AVL binary tree
+     */
     @Override
     public Iterator<T> iteratorLevelOrder() {
         DoublyUnorderedLinkedList<T> tempList = new DoublyUnorderedLinkedList<T>();
@@ -175,6 +223,12 @@ public class LinkedBinaryTreeAVL<T> implements BinaryTreeADT<T> {
         return tempList.iterator();
     }
 
+    /**
+     * Performs a level-order traversal.
+     *
+     * @param node     the node to be used as the root for this traversal
+     * @param tempList the temporary list for use in this traversal
+     */
     protected void levelOrder(AVLTreeNode<T> node, DoublyUnorderedLinkedList<T> tempList) {
         LinkedQueue<AVLTreeNode<T>> queue = new LinkedQueue<>();
         if (node != null) {

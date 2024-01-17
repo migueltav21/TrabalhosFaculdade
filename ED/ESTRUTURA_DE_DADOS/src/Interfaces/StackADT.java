@@ -1,7 +1,7 @@
 package Interfaces;
 /**
+ * StackADT defines the interface to a Stack.
  *
- * @author Rui Tavares
  */
 public interface StackADT<T> {
     

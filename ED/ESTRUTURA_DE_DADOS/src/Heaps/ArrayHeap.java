@@ -108,6 +108,12 @@ public class ArrayHeap<T> extends ArrayBinaryTree<T> implements HeapADT<T> {
         tree[node] = temp;
     }
 
+    /**
+     * Returns the element with the minimum value in the heap.
+     *
+     * @return the element with the minimum value in the heap
+     * @throws EmptyCollectionException if the heap is empty
+     */
     @Override
     public T findMin() throws EmptyCollectionException {
         if (isEmpty())

@@ -5,12 +5,26 @@ import java.util.NoSuchElementException;
 import Interfaces.UnorderedListADT;
 import Nodes.DoubleNode;
 
+/**
+ * DoublyUnorderedLinkedList represents a doubly linked list that allows
+ * unordered addition of elements.
+ *
+ * @param <T> the type of elements stored in the list
+ */
 public class DoublyUnorderedLinkedList<T> extends DoublyLinkedList<T> implements UnorderedListADT<T> {
 
+    /**
+     * Constructs an empty DoublyUnorderedLinkedList.
+     */
     public DoublyUnorderedLinkedList() {
         super();
     }
 
+    /**
+     * Adds the specified element to the front of the list.
+     *
+     * @param element the element to be added to the front of the list
+     */
     @Override
     public void addToFront(T element) {
         DoubleNode<T> novo = new DoubleNode<>(element);
@@ -25,8 +39,13 @@ public class DoublyUnorderedLinkedList<T> extends DoublyLinkedList<T> implements
         setSize(getSize() + 1);
         setModCount(getModCount() + 1);
     }
-    
 
+
+    /**
+     * Adds the specified element to the rear of the list.
+     *
+     * @param element the element to be added to the rear of the list
+     */
     @Override
     public void addToRear(T element) {
         DoubleNode<T> novo = new DoubleNode<>(element);
@@ -41,8 +60,15 @@ public class DoublyUnorderedLinkedList<T> extends DoublyLinkedList<T> implements
         setSize(getSize() + 1);
         setModCount(getModCount() + 1);
     }
-    
 
+
+    /**
+     * Adds the specified element after the target element in the list.
+     *
+     * @param element the element to be added
+     * @param target  the element after which the new element is added
+     * @throws NoSuchElementException if the target element is not found in the list
+     */
     @Override
     public void addAfter(T element, T target) {
         if (isEmpty()) {

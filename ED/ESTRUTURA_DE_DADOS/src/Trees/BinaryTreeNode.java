@@ -35,26 +35,56 @@ public class BinaryTreeNode<T> {
         return children;
     }
 
+    /**
+     * Gets the element stored in this node.
+     *
+     * @return The element stored in this node.
+     */
     public T getElement() {
         return element;
     }
 
+    /**
+     * Sets the element stored in this node.
+     *
+     * @param element The new element to set in this node.
+     */
     public void setElement(T element) {
         this.element = element;
     }
 
+    /**
+     * Gets the left child of this node.
+     *
+     * @return The left child of this node.
+     */
     public BinaryTreeNode<T> getLeft() {
         return left;
     }
 
+    /**
+     * Sets the left child of this node.
+     *
+     * @param left The new left child for this node.
+     */
     public void setLeft(BinaryTreeNode<T> left) {
         this.left = left;
     }
 
+    /**
+     * Gets the right child of this node.
+     *
+     * @return The right child of this node.
+     */
     public BinaryTreeNode<T> getRight() {
         return right;
     }
 
+    /**
+     * Sets the right child of this node.
+     *
+     * @param right The new right child for this node.
+     */
     public void setRight(BinaryTreeNode<T> right) {
         this.right = right;
     }

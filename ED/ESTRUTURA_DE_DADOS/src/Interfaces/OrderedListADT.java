@@ -1,5 +1,9 @@
 package Interfaces;
 
+/**
+ * OrderedListADT defines the interface to a binary orderedList.
+ *
+ */
 public interface OrderedListADT<T> extends ListADT<T> {
     /**
      * Adds the specified element to this list at

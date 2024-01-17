@@ -2,6 +2,11 @@ package Heaps;
 
 import Trees.BinaryTreeNode;
 
+/**
+ * HeapNode represents a node in a heap data structure.
+ *
+ * @param <T> the type of elements stored in the heap node
+ */
 public class HeapNode<T> extends BinaryTreeNode<T> {
     protected HeapNode<T> parent;
 

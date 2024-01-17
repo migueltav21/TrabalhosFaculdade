@@ -2,10 +2,15 @@ package Stacks;
 
 import Interfaces.StackADT;
 
+/**
+ * ArrayStack represents a stack implementation using an array.
+ *
+ * @param <T> the type of elements stored in the stack
+ */
 public class ArrayStack<T> implements StackADT<T> {
 
     /**
-     * constant to represent the default capacity of the array
+     * Constant to represent the default capacity of the array.
      */
     private final int DEFAULT_CAPACITY = 30;
     /**
@@ -37,15 +42,14 @@ public class ArrayStack<T> implements StackADT<T> {
         }
         stack = (T[]) new Object[initialCapacity];
         top = 0;
-        /**
-         * Adds the specified element to the top of this stack, expanding the
-         * capacity of the stack array if necessary.
-         *
-         * @param element generic element to be pushed onto stack
-         */
-
     }
 
+    /**
+     * Adds the specified element to the top of this stack, expanding the
+     * capacity of the stack array if necessary.
+     *
+     * @param element generic element to be pushed onto stack
+     */
     @Override
     public void push(T element) {
         if (top == stack.length) {
@@ -55,6 +59,11 @@ public class ArrayStack<T> implements StackADT<T> {
         top++;
     }
 
+    /**
+     * Expands the capacity of the stack array by creating a new array with
+     * additional space and copying the elements from the current array.
+     * The new array will have 10 more slots than the current capacity.
+     */
     private void expandCapacity() {
         T[] newStack = (T[]) (new Object[stack.length + 10]);
         for (int i = 0; i < stack.length; i++) {
@@ -63,6 +72,11 @@ public class ArrayStack<T> implements StackADT<T> {
         stack = newStack;
     }
 
+    /**
+     * Removes and returns the element at the top of this stack.
+     *
+     * @return the element removed from the top of the stack
+     */
     @Override
     public T pop() {
         if (isEmpty()) {
@@ -75,6 +89,11 @@ public class ArrayStack<T> implements StackADT<T> {
         return result;
     }
 
+    /**
+     * Returns the element at the top of this stack without removing it.
+     *
+     * @return the element at the top of the stack
+     */
     @Override
     public T peek() {
         if (isEmpty()) {
@@ -84,16 +103,31 @@ public class ArrayStack<T> implements StackADT<T> {
         return stack[top - 1];
     }
 
+    /**
+     * Checks if the stack is empty.
+     *
+     * @return true if the stack is empty, false otherwise
+     */
     @Override
     public boolean isEmpty() {
         return top == 0;
     }
 
+    /**
+     * Returns the number of elements in the stack.
+     *
+     * @return the number of elements in the stack
+     */
     @Override
     public int size() {
         return top;
     }
 
+    /**
+     * Returns a string representation of the array stack.
+     *
+     * @return a string representation of the array stack
+     */
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();

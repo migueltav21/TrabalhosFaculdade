@@ -4,29 +4,41 @@ import java.util.Iterator;
 
 import Interfaces.NetworkADT;
 import Lists.DoublyUnorderedLinkedList;
+import Queues.LinkedQueue;
 
+/**
+ * Network represents an adjacency matrix implementation of a weighted graph.
+ *
+ * @param <T> the type of elements stored in the vertices of the network
+ */
 public class Network<T> extends Graph<T> implements NetworkADT<T> {
     private double[][] weightMatrix; // matriz de pesos
 
     /**
-     * Cria uma rede vazia.
+     * Creates an empty network.
      */
     public Network() {
         super();
         this.weightMatrix = new double[DEFAULT_CAPACITY][DEFAULT_CAPACITY];
     }
 
+    /**
+     * Creates an empty network with a specified initial capacity.
+     *
+     * @param num the initial capacity of the network
+     */
     public Network(int num) {
         super(num);
+        this.adjMatrix = new boolean[num][num];
         this.weightMatrix = new double[num][num];
     }
 
     /**
-     * Insere uma aresta com peso entre dois vértices da rede.
+     * Inserts an edge with weight between two vertices of the network.
      *
-     * @param vertex1 o primeiro vértice
-     * @param vertex2 o segundo vértice
-     * @param weight  o peso da aresta
+     * @param vertex1 the first vertex
+     * @param vertex2 the second vertex
+     * @param weight  the weight of the edge
      */
     @Override
     public void addEdge(T vertex1, T vertex2, double weight) {
@@ -35,19 +47,18 @@ public class Network<T> extends Graph<T> implements NetworkADT<T> {
 
         if (indexIsValid(index1) && indexIsValid(index2)) {
             adjMatrix[index1][index2] = true;
-            adjMatrix[index2][index1] = true;
             weightMatrix[index1][index2] = weight;
-            weightMatrix[index2][index1] = weight;
         }
     }
 
     /**
-     * Retorna o peso do caminho mais curto nesta rede.
+     * Returns the weight of the shortest path in this network.
      *
-     * @param vertex1 o primeiro vértice
-     * @param vertex2 o segundo vértice
-     * @return o peso do caminho mais curto nesta rede
+     * @param vertex1 the first vertex
+     * @param vertex2 the second vertex
+     * @return the weight of the shortest path in this network
      */
+
     @Override
     public double shortestPathWeight(T vertex1, T vertex2) {
         int startIndex = getIndex(vertex1);
@@ -62,8 +73,6 @@ public class Network<T> extends Graph<T> implements NetworkADT<T> {
         int[] previousVertices = new int[numVertices];
         boolean[] visited = new boolean[numVertices];
 
-        // Inicializa as distâncias com infinito, tight como false e os vértices
-        // anteriores como -1
         for (int i = 0; i < numVertices; i++) {
             distances[i] = Double.POSITIVE_INFINITY;
             tight[i] = false;
@@ -71,11 +80,9 @@ public class Network<T> extends Graph<T> implements NetworkADT<T> {
             visited[i] = false;
         }
 
-        // A distância até o vértice de partida é 0
         distances[startIndex] = 0;
 
         while (true) {
-            // Encontrar vértice u com tight[u] = false e menor distância estimada D[u]
             int u = -1;
             double minDistance = Double.POSITIVE_INFINITY;
 
@@ -87,13 +94,11 @@ public class Network<T> extends Graph<T> implements NetworkADT<T> {
             }
 
             if (u == -1) {
-                // Todos os vértices estão 'tight'
                 break;
             }
 
             tight[u] = true;
 
-            // Atualizar distâncias para vértices adjacentes a u
             for (int z = 0; z < numVertices; z++) {
                 if (adjMatrix[u][z] && !visited[z]) {
                     double newDistance = distances[u] + weightMatrix[u][z];
@@ -106,10 +111,16 @@ public class Network<T> extends Graph<T> implements NetworkADT<T> {
             }
         }
 
-        // Retorna o peso do caminho mais curto
         return distances[targetIndex];
     }
 
+    /**
+     * Returns an iterator over the vertices in the shortest path from startVertex to targetVertex.
+     *
+     * @param startVertex  the starting vertex
+     * @param targetVertex the target vertex
+     * @return an iterator over the vertices in the shortest path
+     */
     @Override
     public Iterator<T> iteratorShortestPath(T startVertex, T targetVertex) {
         int startIndex = getIndex(startVertex);
@@ -123,21 +134,17 @@ public class Network<T> extends Graph<T> implements NetworkADT<T> {
         boolean[] tight = new boolean[numVertices];
         int[] previousVertices = new int[numVertices];
         boolean[] visited = new boolean[numVertices];
-    
-        // Inicializa as distâncias com infinito, tight como false e os vértices
-        // anteriores como -1
+
         for (int i = 0; i < numVertices; i++) {
             distances[i] = Double.POSITIVE_INFINITY;
             tight[i] = false;
             previousVertices[i] = -1;
             visited[i] = false;
         }
-    
-        // A distância até o vértice de partida é 0
+
         distances[startIndex] = 0;
     
         while (true) {
-            // Encontrar vértice u com tight[u] = false e menor distância estimada D[u]
             int u = -1;
             double minDistance = Double.POSITIVE_INFINITY;
     
@@ -149,13 +156,12 @@ public class Network<T> extends Graph<T> implements NetworkADT<T> {
             }
     
             if (u == -1) {
-                // Todos os vértices estão 'tight'
                 break;
             }
     
             tight[u] = true;
     
-            // Atualizar distâncias para vértices adjacentes a u
+
             for (int z = 0; z < numVertices; z++) {
                 if (adjMatrix[u][z] && !visited[z]) {
                     double newDistance = distances[u] + weightMatrix[u][z];
@@ -168,7 +174,7 @@ public class Network<T> extends Graph<T> implements NetworkADT<T> {
             }
         }
     
-        // Construir o caminho mais curto
+
         DoublyUnorderedLinkedList<T> resultList = new DoublyUnorderedLinkedList<>();
         int currentVertex = targetIndex;
     

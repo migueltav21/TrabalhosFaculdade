@@ -4,6 +4,11 @@ import Exceptions.ElementNotFoundException;
 import Exceptions.EmptyCollectionException;
 import Interfaces.BinarySearchTreeADT;
 
+/**
+ * LinkedBinarySearchTree represents a linked implementation of a binary search tree.
+ *
+ * @param <T> The generic type of elements stored in the tree.
+ */
 public class LinkedBinarySearchTree<T> extends LinkedBinaryTree<T>
         implements BinarySearchTreeADT<T> {
     /**
@@ -151,6 +156,11 @@ public class LinkedBinarySearchTree<T> extends LinkedBinaryTree<T>
         return result;
     }
 
+    /**
+     * Removes all occurrences of the specified target element from the binary search tree.
+     *
+     * @param targetElement The element to be removed.
+     */
     @Override
     public void removeAllOccurrences(T targetElement) {
         removeElement(targetElement);
@@ -162,6 +172,12 @@ public class LinkedBinarySearchTree<T> extends LinkedBinaryTree<T>
         }
     }
 
+    /**
+     * Removes and returns the smallest element from the binary search tree.
+     *
+     * @return The smallest element in the binary search tree.
+     * @throws EmptyCollectionException If the binary tree is empty.
+     */
     @Override
     public T removeMin() {
         T result = null;
@@ -190,6 +206,12 @@ public class LinkedBinarySearchTree<T> extends LinkedBinaryTree<T>
         return result;
     }
 
+    /**
+     * Removes and returns the largest element from the binary search tree.
+     *
+     * @return The largest element in the binary search tree.
+     * @throws EmptyCollectionException If the binary tree is empty.
+     */
     @Override
     public T removeMax() {
         T result = null;
@@ -220,6 +242,12 @@ public class LinkedBinarySearchTree<T> extends LinkedBinaryTree<T>
         return result;
     }
 
+    /**
+     * Finds and returns the smallest element in the binary search tree.
+     *
+     * @return The smallest element in the binary search tree.
+     * @throws EmptyCollectionException If the binary tree is empty.
+     */
     @Override
     public T findMin() {
         T result = null;
@@ -239,6 +267,12 @@ public class LinkedBinarySearchTree<T> extends LinkedBinaryTree<T>
 
     }
 
+    /**
+     * Finds and returns the largest element in the binary search tree.
+     *
+     * @return The largest element in the binary search tree.
+     * @throws EmptyCollectionException If the binary tree is empty.
+     */
     @Override
     public T findMax() {
         T result = null;

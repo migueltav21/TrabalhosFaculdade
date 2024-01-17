@@ -23,6 +23,13 @@ public class LinkedBinarySearchTreeAVL<T> extends LinkedBinaryTreeAVL<T> impleme
         super(element);
     }
 
+    /**
+     * Adds the specified object to the AVL binary search tree in the
+     * appropriate position according to its key value.
+     * Note that equal elements are added to the right.
+     *
+     * @param element the element to be added to the AVL binary search tree
+     */
     public void addElement(T element) {
         AVLTreeNode<T> temp = new AVLTreeNode<T>(element);
 
@@ -35,6 +42,15 @@ public class LinkedBinarySearchTreeAVL<T> extends LinkedBinaryTreeAVL<T> impleme
         count++;
     }
 
+    /**
+     * Adds a new AVL tree node with the specified element to the AVL tree rooted at
+     * the given current node. This method is a recursive helper method used in the
+     * process of adding elements to the AVL tree while maintaining the AVL property.
+     *
+     * @param currentNode the current AVL tree node being considered
+     * @param newNode     the new AVL tree node to be added
+     * @return the updated root of the subtree after adding the new node
+     */
     private AVLTreeNode<T> addElement(AVLTreeNode<T> currentNode, AVLTreeNode<T> newNode) {
         Comparable<T> element = (Comparable<T>) newNode.element;
 
@@ -52,11 +68,20 @@ public class LinkedBinarySearchTreeAVL<T> extends LinkedBinaryTreeAVL<T> impleme
             }
         }
 
-        // Atualizar altura e rebalancear durante a subida na recursão
         updateHeight(currentNode);
         return rebalance(currentNode);
     }
 
+    /**
+     * Removes the first occurrence of the specified target
+     * element from the AVL binary search tree and returns a reference to it.
+     * Throws an ElementNotFoundException if the specified target
+     * element is not found in the AVL binary search tree.
+     *
+     * @param targetElement the element being sought in the AVL binary search tree
+     * @return a reference to the specified target
+     * @throws ElementNotFoundException if an element not found exception occurs
+     */
     public T removeElement(T targetElement)
             throws ElementNotFoundException {
         T result = null;
@@ -143,6 +168,11 @@ public class LinkedBinarySearchTreeAVL<T> extends LinkedBinaryTreeAVL<T> impleme
         return result;
     }
 
+    /**
+     * Removes all occurrences of the specified target element from the AVL binary search tree.
+     *
+     * @param targetElement the element to be removed from the AVL binary search tree
+     */
     @Override
     public void removeAllOccurrences(T targetElement) {
         try {
@@ -152,6 +182,12 @@ public class LinkedBinarySearchTreeAVL<T> extends LinkedBinaryTreeAVL<T> impleme
         }
     }
 
+    /**
+     * Removes and returns the smallest element from the AVL binary search tree.
+     * Rebalances the tree after removal.
+     *
+     * @return the smallest element in the AVL binary search tree
+     */
     @Override
     public T removeMin() {
         T result = null;
@@ -162,7 +198,7 @@ public class LinkedBinarySearchTreeAVL<T> extends LinkedBinaryTreeAVL<T> impleme
             if (root.left == null) {
                 result = root.element;
                 root = root.right;
-                root = rebalance(root); // Rebalance a árvore após a remoção
+                root = rebalance(root);
                 updateHeight(root);
             } else {
                 AVLTreeNode<T> parent = root;
@@ -183,6 +219,12 @@ public class LinkedBinarySearchTreeAVL<T> extends LinkedBinaryTreeAVL<T> impleme
         return result;
     }
 
+    /**
+     * Removes and returns the largest element from the AVL binary search tree.
+     * Rebalances the tree after removal.
+     *
+     * @return the largest element in the AVL binary search tree
+     */
     @Override
     public T removeMax() {
         T result = null;
@@ -193,7 +235,7 @@ public class LinkedBinarySearchTreeAVL<T> extends LinkedBinaryTreeAVL<T> impleme
             if (root.right == null) {
                 result = root.element;
                 root = root.left;
-                root = rebalance(root); // Rebalance a árvore após a remoção
+                root = rebalance(root);
                 updateHeight(root);
             } // if
             else {
@@ -207,16 +249,22 @@ public class LinkedBinarySearchTreeAVL<T> extends LinkedBinaryTreeAVL<T> impleme
 
                 result = current.element;
                 parent.right = current.left;
-                root = rebalance(root); // Rebalance a árvore após a remoção
+                root = rebalance(root);
                 updateHeight(root);
-            } // else
+            }
 
             count--;
-        } // else
+        }
 
         return result;
     }
 
+    /**
+     * Returns the smallest element in the AVL binary search tree.
+     *
+     * @return the smallest element in the AVL binary search tree
+     * @throws EmptyCollectionException if the binary tree is empty
+     */
     @Override
     public T findMin() {
         T result = null;
@@ -230,12 +278,18 @@ public class LinkedBinarySearchTreeAVL<T> extends LinkedBinaryTreeAVL<T> impleme
                 current = current.left;
 
             result = current.element;
-        } // else
+        }
 
         return result;
 
     }
 
+    /**
+     * Returns the largest element in the AVL binary search tree.
+     *
+     * @return the largest element in the AVL binary search tree
+     * @throws EmptyCollectionException if the binary tree is empty
+     */
     @Override
     public T findMax() {
         T result = null;
@@ -254,6 +308,13 @@ public class LinkedBinarySearchTreeAVL<T> extends LinkedBinaryTreeAVL<T> impleme
         return result;
     }
 
+    /**
+     * Returns the height of the given AVL tree node.
+     * If the node is null, it returns -1, indicating an empty subtree.
+     *
+     * @param node the AVL tree node for which to determine the height
+     * @return the height of the node or -1 if the node is null
+     */
     private int height(AVLTreeNode<T> node) {
         if (node != null) {
             return node.height;
@@ -262,16 +323,37 @@ public class LinkedBinarySearchTreeAVL<T> extends LinkedBinaryTreeAVL<T> impleme
         }
     }
 
+    /**
+     * Updates the height of the given AVL tree node based on the heights
+     * of its left and right children.
+     *
+     * @param node the AVL tree node to update the height for
+     */
     private void updateHeight(AVLTreeNode<T> node) {
         int leftChildHeight = height(node.left);
         int rightChildHeight = height(node.right);
         node.height = Math.max(leftChildHeight, rightChildHeight) + 1;
     }
 
+    /**
+     * Calculates the balance factor of the given AVL tree node,
+     * which is the difference between the height of the right subtree
+     * and the height of the left subtree.
+     *
+     * @param node the AVL tree node for which to calculate the balance factor
+     * @return the balance factor of the node
+     */
     private int balanceFactor(AVLTreeNode<T> node) {
         return height(node.right) - height(node.left);
     }
 
+    /**
+     * Performs a right rotation on the given AVL tree node.
+     * This operation assumes a left-heavy subtree.
+     *
+     * @param node the AVL tree node to perform the rotation on
+     * @return the new root of the subtree after the rotation
+     */
     private AVLTreeNode<T> rotateRight(AVLTreeNode<T> node) {
         AVLTreeNode<T> leftChild = node.left;
 
@@ -284,6 +366,13 @@ public class LinkedBinarySearchTreeAVL<T> extends LinkedBinaryTreeAVL<T> impleme
         return leftChild;
     }
 
+    /**
+     * Performs a left rotation on the given AVL tree node.
+     * This operation assumes a right-heavy subtree.
+     *
+     * @param node the AVL tree node to perform the rotation on
+     * @return the new root of the subtree after the rotation
+     */
     private AVLTreeNode<T> rotateLeft(AVLTreeNode<T> node) {
         AVLTreeNode<T> rightChild = node.right;
 
@@ -296,25 +385,31 @@ public class LinkedBinarySearchTreeAVL<T> extends LinkedBinaryTreeAVL<T> impleme
         return rightChild;
     }
 
+    /**
+     * Rebalances the given AVL tree node if it is unbalanced.
+     * Performs rotations based on the balance factor to ensure
+     * the AVL property is maintained.
+     *
+     * @param node the AVL tree node to rebalance
+     * @return the new root of the subtree after rebalancing
+     */
     private AVLTreeNode<T> rebalance(AVLTreeNode<T> node) {
         int balanceFactor = balanceFactor(node);
 
-        // Left-heavy?
         if (balanceFactor < -1) {
             if (height(node.left.right) > height(node.left.left)) {
-                // Rotate left-right
                 node.left = rotateLeft(node.left);
             }
-            // Rotate right
+
             node = rotateRight(node);
         }
-        // Right-heavy?
+
         else if (balanceFactor > 1) {
             if (height(node.right.left) > height(node.right.right)) {
-                // Rotate right-left
+
                 node.right = rotateRight(node.right);
             }
-            // Rotate left
+
             node = rotateLeft(node);
         }
 

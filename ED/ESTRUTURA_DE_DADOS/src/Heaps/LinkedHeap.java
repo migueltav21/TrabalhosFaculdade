@@ -5,13 +5,17 @@ import Interfaces.HeapADT;
 import Trees.LinkedBinaryTree;
 
 /**
- * Heap implements a heap.
+ * LinkedHeap represents a binary heap implemented using a linked binary tree.
  *
+ * @param <T> the type of elements stored in the heap
  */
 public class LinkedHeap<T> extends LinkedBinaryTree<T>
         implements HeapADT<T> {
     public HeapNode<T> lastNode;
 
+    /**
+     * Creates an empty LinkedHeap.
+     */
     public LinkedHeap() {
         super();
     }
@@ -176,6 +180,12 @@ public class LinkedHeap<T> extends LinkedBinaryTree<T>
         node.setElement(temp);
     }
 
+    /**
+     * Returns the element with the minimum value in the heap.
+     *
+     * @return the element with the minimum value in the heap
+     * @throws EmptyCollectionException if the heap is empty
+     */
     @Override
     public T findMin() {
         if (isEmpty()) {

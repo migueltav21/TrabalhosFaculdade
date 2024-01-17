@@ -1,5 +1,9 @@
 package Interfaces;
 
+/**
+ * QueueADT defines the interface to a queue.
+ *
+ */
 public interface QueueADT<T> {
  /**
  * Adds one element to the rear of this queue.

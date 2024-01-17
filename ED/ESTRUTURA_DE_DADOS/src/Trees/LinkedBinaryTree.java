@@ -34,21 +34,42 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T> {
         root = new BinaryTreeNode<T>(element);
     }
 
+    /**
+     * Returns the element at the root of this binary tree.
+     *
+     * @return the element at the root of this binary tree
+     */
     @Override
     public T getRoot() {
         return root.element;
     }
 
+    /**
+     * Checks if this binary tree is empty.
+     *
+     * @return true if the binary tree is empty, false otherwise
+     */
     @Override
     public boolean isEmpty() {
         return count == 0;
     }
 
+    /**
+     * Returns the number of elements in this binary tree.
+     *
+     * @return the number of elements in this binary tree
+     */
     @Override
     public int size() {
         return count;
     }
 
+    /**
+     * Checks if the binary tree contains the specified target element.
+     *
+     * @param elementoAlvo the element being sought in this tree
+     * @return true if the element is in the tree, false otherwise
+     */
     @Override
     public boolean contains(T elementoAlvo) {
         try {
@@ -132,6 +153,11 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T> {
         }
     }
 
+    /**
+     * Returns an iterator for the preorder traversal of this binary tree.
+     *
+     * @return a preorder iterator over this binary tree
+     */
     @Override
     public Iterator<T> iteratorPreOrder() {
         DoublyUnorderedLinkedList<T> tempList = new DoublyUnorderedLinkedList<T>();
@@ -140,6 +166,13 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T> {
         return tempList.iterator();
     }
 
+    /**
+     * Performs a recursive preorder traversal.
+     *
+     * @param node     the node to be used as the root
+     *                 for this traversal
+     * @param tempList the temporary list for use in this traversal
+     */
     protected void preOrder(BinaryTreeNode<T> node,
             DoublyUnorderedLinkedList<T> tempList) {
         if (node != null) {
@@ -149,6 +182,11 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T> {
         }
     }
 
+    /**
+     * Returns an iterator for the postorder traversal of this binary tree.
+     *
+     * @return a postorder iterator over this binary tree
+     */
     @Override
     public Iterator<T> iteratorPostOrder() {
         DoublyUnorderedLinkedList<T> tempList = new DoublyUnorderedLinkedList<T>();
@@ -157,6 +195,13 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T> {
         return tempList.iterator();
     }
 
+    /**
+     * Performs a recursive postorder traversal.
+     *
+     * @param node     the node to be used as the root
+     *                 for this traversal
+     * @param tempList the temporary list for use in this traversal
+     */
     protected void postOrder(BinaryTreeNode<T> node,
             DoublyUnorderedLinkedList<T> tempList) {
         if (node != null) {
@@ -166,6 +211,11 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T> {
         }
     }
 
+    /**
+     * Returns an iterator for the level-order traversal of this binary tree.
+     *
+     * @return a level-order iterator over this binary tree
+     */
     @Override
     public Iterator<T> iteratorLevelOrder() {
         DoublyUnorderedLinkedList<T> tempList = new DoublyUnorderedLinkedList<T>();
@@ -174,6 +224,13 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T> {
         return tempList.iterator();
     }
 
+    /**
+     * Performs a level-order traversal.
+     *
+     * @param node     the node to be used as the root
+     *                 for this traversal
+     * @param tempList the temporary list for use in this traversal
+     */
     protected void levelOrder(BinaryTreeNode<T> node, DoublyUnorderedLinkedList<T> tempList) {
         LinkedQueue<BinaryTreeNode<T>> queue = new LinkedQueue<>();
         if (node != null) {

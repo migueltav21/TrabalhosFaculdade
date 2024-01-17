@@ -2,7 +2,10 @@ package Interfaces;
 
 import java.util.Iterator;
 
-public interface ListADT<T> extends Iterable<T> {
+/**
+ * ListADT defines the interface to a list.
+ *
+ */public interface ListADT<T> extends Iterable<T> {
     /**
      * Removes and returns the first element from this list.
      *

@@ -8,6 +8,11 @@ import Lists.ArrayUnorderedList;
 import Lists.DoublyUnorderedLinkedList;
 import Queues.CircularArrayQueue;
 
+/**
+ * ArrayBinaryTree represents a binary tree implemented using an array.
+ *
+ * @param <T> the type of elements stored in the tree
+ */
 public class ArrayBinaryTree<T> implements BinaryTreeADT<T> {
     private final int CAPACITY = 50;
     protected int count;
@@ -34,6 +39,9 @@ public class ArrayBinaryTree<T> implements BinaryTreeADT<T> {
     }
 
 
+    /**
+     * Expands the capacity of the tree when needed.
+     */
     protected void expandCapacity()
    {
       T[] temp = (T[]) new Object[tree.length * 2];
@@ -42,22 +50,43 @@ public class ArrayBinaryTree<T> implements BinaryTreeADT<T> {
       tree = temp;
    }
 
-   
+
+    /**
+     * Returns the root element of the tree.
+     *
+     * @return the root element
+     */
     @Override
     public T getRoot() {
         return tree[0];
     }
 
+    /**
+     * Checks if the binary tree is empty.
+     *
+     * @return true if the tree is empty, false otherwise
+     */
     @Override
     public boolean isEmpty() {
         return count == 0;
     }
 
+    /**
+     * Returns the number of elements in the tree.
+     *
+     * @return the number of elements in the tree
+     */
     @Override
     public int size() {
         return count;
     }
 
+    /**
+     * Checks if the tree contains the specified element.
+     *
+     * @param elementoAlvo the element being sought in the tree
+     * @return true if the element is in the tree, false otherwise
+     */
     @Override
     public boolean contains(T elementoAlvo) {
         try {
@@ -121,6 +150,11 @@ public class ArrayBinaryTree<T> implements BinaryTreeADT<T> {
             }
     }
 
+    /**
+     * Returns an iterator for a preorder traversal of the binary tree.
+     *
+     * @return Iterator over the binary tree.
+     */
     @Override
     public Iterator<T> iteratorPreOrder() {
         DoublyUnorderedLinkedList<T> templist = new DoublyUnorderedLinkedList<T>();
@@ -128,6 +162,12 @@ public class ArrayBinaryTree<T> implements BinaryTreeADT<T> {
         return templist.iterator();
     }
 
+    /**
+     * Performs a recursive preorder traversal.
+     *
+     * @param node     The node used in the traversal.
+     * @param templist The temporary list used in the traversal.
+     */
     protected void preorder(int node, DoublyUnorderedLinkedList<T> templist) {
         if (node < tree.length)
             if (tree[node] != null) {
@@ -137,6 +177,11 @@ public class ArrayBinaryTree<T> implements BinaryTreeADT<T> {
             }
     }
 
+    /**
+     * Returns an iterator for a postorder traversal of the binary tree.
+     *
+     * @return Iterator over the binary tree.
+     */
     @Override
     public Iterator<T> iteratorPostOrder() {
         DoublyUnorderedLinkedList<T> templist = new DoublyUnorderedLinkedList<T>();
@@ -144,6 +189,12 @@ public class ArrayBinaryTree<T> implements BinaryTreeADT<T> {
         return templist.iterator();
     }
 
+    /**
+     * Performs a recursive postorder traversal.
+     *
+     * @param node     The node used in the traversal.
+     * @param templist The temporary list used in the traversal.
+     */
     protected void postorder(int node, DoublyUnorderedLinkedList<T> templist) {
         if (node < tree.length)
             if (tree[node] != null) {
@@ -153,6 +204,11 @@ public class ArrayBinaryTree<T> implements BinaryTreeADT<T> {
             }
     }
 
+    /**
+     * Returns an iterator for a level-order traversal of the binary tree.
+     *
+     * @return Iterator over the binary tree.
+     */
     @Override
     public Iterator<T> iteratorLevelOrder() {
         DoublyUnorderedLinkedList<T> templist = new DoublyUnorderedLinkedList<T>();
@@ -160,6 +216,12 @@ public class ArrayBinaryTree<T> implements BinaryTreeADT<T> {
         return templist.iterator();
     }
 
+    /**
+     * Performs a level-order traversal.
+     *
+     * @param node     The node used in the traversal.
+     * @param tempList The temporary list used in the traversal.
+     */
     protected void levelOrder(int node, DoublyUnorderedLinkedList<T> tempList) {
         CircularArrayQueue<T> queue = new CircularArrayQueue<>();
         if (tree[node] != null) {
@@ -182,6 +244,13 @@ public class ArrayBinaryTree<T> implements BinaryTreeADT<T> {
         }
     }
 
+    /**
+     * Returns the index of the specified element in the binary tree.
+     *
+     * @param element The element to find the index for.
+     * @return The index of the element.
+     * @throws ElementNotFoundException If the element is not found in the tree.
+     */
     public int indexOf(T element) throws ElementNotFoundException{
         int temp = 0;
         boolean found = false;

@@ -1,5 +1,9 @@
 package Interfaces;
 
+/**
+ * HeapADT defines the interface to a heap.
+ *
+ */
 public interface HeapADT<T> extends BinaryTreeADT<T> {
     /**
      * Adds the specified object to this heap.
