@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Projeto_ED.app.main1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../projeto_ed/API_Jar/Projeto_ED.app.main.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

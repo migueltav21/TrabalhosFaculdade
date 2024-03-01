@@ -4,7 +4,6 @@ import java.util.Iterator;
 
 import Exceptions.ElementNotFoundException;
 import Interfaces.BinaryTreeADT;
-import Lists.ArrayUnorderedList;
 import Lists.DoublyUnorderedLinkedList;
 import Queues.CircularArrayQueue;
 
