@@ -1,0 +1,18 @@
+h1{
+    text-align: center;
+}
+
+body{
+    background-color: beige;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p{
+    font-style:normal;
+    color: rgba(216, 27, 27, 0.856);
+    text-align: justify;
+}
+
+ul{
+    color:burlywood
+}

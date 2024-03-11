@@ -1,0 +1,14 @@
+h1{
+    background-color: rgb(176, 223, 252);
+    color: darkblue;
+    border-bottom: 2px solid darkblue;
+            padding-bottom: 5px; /* Adiciona um pequeno espaço entre o texto e a borda inferior */
+}
+
+p{
+    top:70px;
+    position:absolute;
+    left: 200px;
+    width: 300px;
+    font-family: Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,58 @@
+html, body {
+height: 100vh;
+background-color: darkblue;
+}
+
+
+ul{
+    list-style: none;
+}
+
+h1{
+    padding: 20px;
+    border-left: 120px solid rgb(111, 196, 224);
+}
+
+h2{
+    color:  rgb(111, 196, 224);
+}
+
+.wrapper{
+    background-color: white;
+    height: 100vh;
+}
+
+.leftColumn{
+    float: left;
+    background-color: lightblue;
+    width: 10%;
+    height: 100vh;
+}
+
+.logo{
+    margin: 0;
+    background-color: rgb(111, 196, 224);
+    color: darkblue;
+    font-size: 40px;
+}
+
+.rightColum {
+    float: left;
+    
+}
+
+img {
+    padding: 20px;
+    width: 250px;
+}
+
+.content{
+    width: 65%;
+    float:left;
+    margin-left: 40px;
+}
+
+footer{
+    text-align: center;
+}
+

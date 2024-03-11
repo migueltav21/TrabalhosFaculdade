@@ -1,0 +1,36 @@
+body {
+    background-color: darkblue;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    background-color: rgb(176, 223, 252);
+    color: darkblue;
+    padding: 15px;
+    text-align: center;
+}
+
+.columns {
+    display: flex;
+}
+
+.coluna1 {
+    text-align: center;
+    width: 15%;
+    background-color: rgb(137, 204, 245);
+    height: 80vh;
+}
+
+.coluna1 p {
+    line-height:0px /* Ajuste o espaçamento entre as linhas (parágrafos) */
+}
+
+
+.coluna2 {
+    background-color: white;
+    flex-grow: 1; /* Este item crescerá para ocupar o espaço disponível proporcionalmente */
+}

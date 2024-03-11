@@ -1,0 +1,48 @@
+div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: lightgray;
+    margin: 0;
+}
+
+body{
+    margin: 0;
+    background-color: lightgray; 
+}
+
+input{
+    width: 300px;
+    padding: 8px;
+}
+
+select{
+    padding: 8px;
+    width: 320px;
+}
+
+input[type="submit"]{
+    width: 320px;
+    background-color: pink;
+    color: white;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    font-weight: bold;
+}
+
+@media (min-width: 500px){
+    input[type="submit"]{
+        background-color: blueviolet;
+    }
+}
+
+@media (min-width:720px){
+    input[type="submit"]{
+        background-color: rgb(37, 156, 37);
+    }
+} 
+
+

@@ -1,0 +1,17 @@
+h1{
+    background-color: lightblue;
+    color: darkblue;
+    border-bottom: 2px solid darkblue;
+}
+
+.content {
+    display: flex;
+    margin-left: 10px; /* Ajuste conforme necessário */
+}
+
+
+p {
+    width: 300px;
+    margin-left: 100px;
+}
+

@@ -1,0 +1,17 @@
+p{
+    color: blue;
+}
+
+h1{
+    color: blueviolet;
+}
+
+@media (max-width: 720px) {
+p{
+    color: aqua;
+}
+
+h1{
+    color: chartreuse;
+}
+}

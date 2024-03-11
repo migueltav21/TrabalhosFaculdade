@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>My first Heading</h1>
+    <p>My first paragraph.</p>
+    <h2>h2</h2>
+    <p>paragrafo 2</p>
+    <h3>h3</h3>
+    <p>paragrafo 3</p>
+    <h4>h4</h4>
+    <p>paragrafo 4</p>
+    <h5>h5</h5>
+    <p>paragrafo 5</p>
+    <h6>h6</h6>
+    <p>paragrafo 6</p>
+    <a href="http://www.estg.ipp.pt" target="_blank" rel="external">ESTG</a>
+    <img src="http://www.estg.ipp.pt/logo-ipp.png" alt="ESTG logo" widht="104" height="142">
+
+<h1>Grupos de trabalho</h1>
+    <table>
+        <thead>
+             <tr>
+               <th>Grupo</th>
+               <th>Nome</th>
+               <th>Contacto</th>
+               <th></th>
+            </tr>
+        </thead>
+            <tr>
+                <td rowspan="2" contenteditable>Grupo 1</td>
+                <td contenteditable>Elemento 1</td>
+                <td contenteditable>900000010 </td>
+                <td contenteditable>220000001</td>
+            </tr>
+            <tr>
+                <td contenteditable>Elemento 2</td>
+                <td colspan="2" contenteditable>900000001</td>
+            </tr>
+            <tr>
+                <td contenteditable>Grupo 2</td>
+                <td contenteditable>Elemento 3</td>
+                <td contenteditable>900001001</td>
+                <td contenteditable>900000101</td>
+            </tr>
+            <tr>
+                <td contenteditable>Grupo 3</td>
+                <td colspan="3" contenteditable>Sem dados</td>
+            </tr>
+    </table>
+
+
+<h2>Formulario</h2>
+<form>
+
+    <label for="nome">Nome:</label><br>
+    <input type="text" required><br>
+    <label for="surname">Apelido:</label><br>
+    <input type="text" required><br>
+
+    <label for="curso">Curso:</label>
+    <select name="curso">
+        <option value="engenharia informatica">engenharia informatica</option>
+        <option value="solicitadoria">solicitadoria</option>
+        <option value="gestao de empresas">gestao de empresas</option>
+    </select><br>
+
+    <label for="opiniao">Opinião:</label><br>
+    <textarea name="opiniao" rows="4" cols="50" placeholder="Digite aqui a sua opinião..."></textarea><br>
+
+    <label for="recomendacao">Recomendaria o curso a outros?</label>
+    <input type="radio"  name="recomendacao" value="sim">Sim
+    <input type="radio"  name="recomendacao" value="nao">Não<br>
+
+    <label for="interesses">Áreas de Interesse:</label>
+    <input type="checkbox"  name="interesses" value="desenvolvimento"> Desenvolvimento
+    <input type="checkbox"  name="interesses" value="design"> Design
+    <input type="checkbox" " name="interesses" value="analise"> Análise<br>
+
+    <label for="email">Email de Contacto:</label>
+    <input type="email" name="email" required><br>
+
+    <input type="submit" value="Submeter">
+    <input type="reset" value="Reset">
+</form>
+
+
+<section>
+    <h1>Famous Cities</h1>
+    
+    <article>
+        <h2 style="background-color: aquamarine; text-align: center;">London</h2>
+        <p style="background-color: chocolate;">London is the capital city of England. It is the most populous city in the united kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+    </article>
+    
+    <article>
+        <h2 style="background-color: darkmagenta;">Paris</h2>
+        <p style="background-color: lightsalmon;">Paris is the capital and most popular city of France.</p>
+    </article>
+</section>
+
+</body>
+</html>
