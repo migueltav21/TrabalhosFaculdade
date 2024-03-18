@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(31, 99, 187);
+            font: normal 18pt arial;
+            color: aliceblue;
+        }
+        div{
+            border: 2px solid black;
+            display: flex;
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inciciando o DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em javascript.</p>
+    <div class = "ola">Clica aqui!</div>
+
+    <script>
+var paragrafos = window.document.getElementsByTagName("p")[1];
+document.write(paragrafos.innerHTML);
+var d = window.document.querySelector('div.ola');
+d.style.background = "blue"
+    </script>
+
+</body>
+</html>
