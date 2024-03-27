@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>OpenChargeMap API Interface</title>
+    </head>
+    <body>
+        <h1>Charge Maps</h1>
+        <div class="container">
+            <h3>Latitude:</h3>
+            <input
+                class="inp"
+                id="lat"
+                type="text"
+                placeholder="Example: -8.9263"
+            />
+            <h3>Longitude:</h3>
+            <input
+                class="inp"
+                id="long"
+                type="text"
+                placeholder="Example: 2.7353"
+            />
+            <div class="botoes">
+                <button type="button" class="btn" onclick="getlocation()">
+                    Submit
+                </button>
+                <button
+                    type="button"
+                    class="btn"
+                >
+                    Get My Position
+                </button>
+            </div>
+        </div>
+        <div class="result">
+            <table id="myTable">
+                <thead>
+                    <tr>
+                        <th>Country</th>
+                        <th>Latitude</th>
+                        <th>Longitude</th>
+                        <th>Adress</th>
+                    </tr>
+                </thead>
+                <tbody id ="tbody"></tbody>
+            </table>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

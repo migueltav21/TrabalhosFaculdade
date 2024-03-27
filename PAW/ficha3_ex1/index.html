@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PAW Aula 3</title>
+        <style>
+            #div1{
+                width: 30%;  
+            }
+        </style>
+    </head>
+    <body>
+        <p id="p2">Hello World!</p>
+        <button type="button" id="myButton" onclick="mudarcor()">
+            Mudar cor
+        </button>
+
+        <p>--------------------------------</p>
+        <h1>Titulo 1</h1>
+        <div id="div1">
+            <p>Paragrafo 1</p>
+            <p>Paragrafo 2</p>
+            <p>Paragrafo 3</p>
+            <p>Paragrafo 4</p>
+            <p>Paragrafo 5</p>
+            <p>Paragrafo 6</p>
+            <p>Paragrafo 7</p>
+            <p>Paragrafo 8</p>
+        </div>
+        <p>--------------------------------</p>
+        <script>
+            function mudarcor() {
+                var color = document.getElementById("p2").style.color;
+                if (color == "black") {
+                    document.getElementById("p2").style.color = "red";
+                } else {
+                    document.getElementById("p2").style.color = "black";
+                }
+            }
+
+            document.write("<p> Conteudo adicionado por javaScript");
+            document.write("<p> Titulo: ");
+            document.write("Titulo: ");
+            document.writeln(document.title);
+            document.write("</p>");
+            document.write("<p> Last modified:");
+            document.write(document.lastModified);
+            document.write("</p>");
+            document.write("<p> Ready state: ");
+            document.write(document.readyState);
+            document.write("</p>");
+            document.write("<p> Fim do conteudo </p>");
+            document.write("<p> Fim do conteudo </p>");
+
+            var i;
+            var a = document.getElementById("div1");
+            a.style.backgroundColor = "gray"
+            var elements = document.getElementById("div1").getElementsByTagName("p");
+            for (i = 0; i < elements.length; i++) {
+                if(i % 2 == 0){
+                elements[i].style.backgroundColor = "red";
+                }
+            }
+        </script>
+    </body>
+</html>

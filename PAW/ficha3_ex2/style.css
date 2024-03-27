@@ -1,0 +1,59 @@
+header {
+    margin: none;
+    text-align: center;
+    background-color: orangered;
+    color: white;
+    height: 40%;
+    padding: 30px;
+}
+
+#inicio {
+    text-align: center;
+    background-color: orangered;
+    color: white;
+}
+
+#caixaTexto {
+    width: 500px;
+    height: 50px;
+    margin-right: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    vertical-align: middle;
+    margin: 0;
+}
+
+#botao1 {
+    width: 150px;
+    height: 50px;
+    vertical-align: middle;
+    margin: 0;
+    border: 0;
+    color: rgba(0, 0, 0, 0.699);
+    background-color: rgb(216, 209, 209);
+    font-family:Georgia, 'Times New Roman', Times, serif,
+        "Lucida Sans", Arial, sans-serif;
+}
+
+#botao2 {
+    border: 0;
+    margin: 0;
+    float: right;
+    width: 100px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+}
+
+#toDo {
+    text-align: center;
+    color: black;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+}
+
+#par{
+    display: inline-block;
+    vertical-align: middle; 
+    width: 80%; 
+    margin: 0;
+}
