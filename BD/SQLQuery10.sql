@@ -1,0 +1,1 @@
+select price, type from Room where hotelNo = (select hotelNO from Hotel where hotelName = 'Grosvenor Hotel')

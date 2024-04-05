@@ -1,0 +1,1 @@
+select COUNT(distinct guestNO) from Booking where dateFrom like '%08%'

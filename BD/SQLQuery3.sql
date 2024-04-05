@@ -1,0 +1,1 @@
+select guestName, guestAddress from Guest where guestAddress like '%London%' order by guestName

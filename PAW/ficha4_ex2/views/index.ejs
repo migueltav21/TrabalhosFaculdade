@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather Web App Interface</title>
+
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="styele.css" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+            id="bootstrap-css"
+        />
+        <!-- Icons -->
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+            integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+            crossorigin="anonymous"
+        />
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="weahterform">
+                        <h1>Search weather</h1>
+                        <label for="paw-form-lat">Latitude</label>
+                        <input
+                            id="paw-form-lat"
+                            type="text"
+                            class="form-control paw-form-element"
+                            placeholder="41.1579"
+                        />
+                        <label for="paw-form-lon">Longitude</label>
+                        <input
+                            id="paw-form-lon"
+                            type="text"
+                            class="form-control paw-form-element"
+                            placeholder="-8.6291"
+                        />
+                        <button
+                            id="paw-form-searchWeather"
+                            class="btn btn-success paw-form-element"
+                            onclick="searchWeather()"
+                        >
+                            Search
+                        </button>
+                    </div>
+                    <hr />
+                    <div id="paw-results-row" class="col-md-12">
+                        <div class="weahterform">
+                            <h1>Weather Results</h1>
+                            <p id="Results"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Optional JavaScript -->
+
+        
+        <script src="script2.js"></script>
+    </body>
+</html>

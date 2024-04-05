@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Inquérito</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Formulário de Inquérito</h1>
+            <form action="/submit" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="age">Idade:</label>
+                    <input type="number" id="age" name="age" />
+                </div>
+                <div class="form-group">
+                    <label for="postalCode">Código Postal:</label>
+                    <input type="text" id="postalCode" name="postalCode" />
+                </div>
+                <div class="form-group">
+                    <label for="foodQuality"
+                        >Qualidade da Comida (1 a 5):</label
+                    >
+                    <input
+                        type="number"
+                        id="foodQuality"
+                        name="foodQuality"
+                        min="1"
+                        max="5"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="prices">Preços (1 a 5):</label>
+                    <input
+                        type="number"
+                        id="prices"
+                        name="prices"
+                        min="1"
+                        max="5"
+                    />
+                </div>
+                <label for="imagem">Imagem:</label>
+                <input type="file" id="imagem" name="imagem" accept="image/*" />
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </body>
+</html>

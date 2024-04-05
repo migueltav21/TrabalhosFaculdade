@@ -1,0 +1,1 @@
+select * from Booking where dateTo is null

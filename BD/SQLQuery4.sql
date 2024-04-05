@@ -1,0 +1,1 @@
+select * from Room where type IN ('double', 'family') and price < 40.00 order by price asc
